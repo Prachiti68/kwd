@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
     <link href="style.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="animation.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   </head>
@@ -174,7 +176,7 @@
 
         <!-- Content Container -->
         <div class="relative container mx-auto py-16 px-8 md:px-40 text-center w-full">
-          <h1 class="text-3xl md:text-5xl font-Playfair">About Us</h1>
+          <h1 class="text-3xl md:text-5xl font-Playfair">Contact Us</h1>
           
         </div>
 
@@ -186,224 +188,142 @@
             </li>
             <li>/</li>
             <li>
-              <a href="about.html" class="text-white font-medium">About</a>
+              <a href="contact.html" class="text-white font-medium">Contact Us</a>
             </li>
           </ul>
         </nav>
       </section>
       <!--About Hero Section Ends -->
 
-      <!-- Celebrating 60 years section starts-->
-      <div class="relative text-[#000053] bg-[#f7fef9] py-16 lg:py-20 px-4 sm:px-6 lg:px-8" data-aos="fade-up">
-        <!-- Left Background Image -->
-        <div class="absolute top-0 left-0 w-1/4 h-full bg-no-repeat bg-cover opacity-20 hidden sm:block" style="background-image: url('/assets/img/15.png');"></div>
-      
-        <!-- Right Background Image -->
-        <div class="absolute top-0 right-0 w-1/4 h-full bg-no-repeat bg-cover opacity-20 hidden sm:block" style="background-image: url('/assets/img/11.png');"></div>
-      
-        <div class="relative max-w-2xl mx-auto text-center">
-          <h2 class="text-xl font-medium sm:text-5xl">Celebrating 60 Years of Excellence</h2>
-          <hr class="border-[#cd5634] w-24 sm:w-40 m-4 mx-auto">
-          <h5 class="mt-4 text-lg sm:text-xl font-medium">A Legacy of Innovation and Precision</h5>
-          <p class="mt-2 md:mt-6 text-sm sm:text-base md:text-md">
-            Since 1965, Khurana Wire Drawing Dies has been a trusted name in the wire drawing industry. As we mark our 60th anniversary, we celebrate six decades of delivering exceptional quality, customer satisfaction, and groundbreaking innovation. Our journey reflects a commitment to precision and excellence, earning the trust of industries across the globe.
-          </p>
-        </div>
-      </div>
-      <!-- celebrating 60 years section ends-->
-      
-      <!-- About Section Start -->
-      <div class="bg-[#f3fff6] text-[#000053] px-6 md:px-20 overflow-hidden ">
-        <section class="max-w-7xl mx-auto py-16 flex flex-col md:flex-row items-center gap-12 " data-aos="fade-up">
-          <!-- Images Section -->
-          <div class="relative w-full md:w-1/2 flex justify-center" data-aos="zoom-in">
-            <div class="relative w-[300px] sm:w-[350px] md:w-[400px] h-[300px] sm:h-[350px] md:h-[400px]">
-              <img src="assets/img/aboutcompany.png" alt="Product Image" 
-                class="absolute -top-8 sm:-top-10 -right-8 sm:-right-10 z-10 w-3/4 rounded-lg shadow-lg transition-transform transform hover:scale-105">
-              <img src="assets/img/1.avif" alt="Product Image" 
-                class="absolute -bottom-8 sm:-bottom-10 -left-8 sm:-left-10 w-3/4 bg-[#f3bc88] rounded-lg transition-transform transform hover:scale-105">
-            </div>
-          </div>
-
-          <!-- Content Section -->
-          <div class="w-full md:w-1/2 p-6 sm:p-8" data-aos="fade-left">
-            <h2 class="text-4xl sm:text-5xl md:text-5xl font-medium text-[#000053] pb-4 mb-2 transition-colors hover:text-[#cd5634]">
-              About Our Journey
-            </h2>
-            <hr class="border-[#cd5634] w-32 sm:w-40 mb-4" data-aos="fade-left">
-            <h3 class="text-xl sm:text-2xl font-medium text-[#000053] transition-colors hover:text-[#cd5634]">
-              Legacy Continues
-            </h3>
-            <p class="mt-4 text-sm sm:text-base md:text-md" data-aos="fade-left">
-              Khurana Wire Drawing Dies was founded in 1965 by Late Avsharan Singh Khurana with a vision to create world-class wire drawing solutions. What began as a small endeavor has grown into a global enterprise, recognized for unmatched quality and reliability. Over the years, we have embraced innovation, adopted cutting-edge technology, and stayed true to our founder’s values of integrity and customer-centricity. At Khurana Wire Drawing Dies, we specialize in manufacturing premium Tungsten Carbide (TC) and Polycrystalline Diamond (PCD) dies. Serving industries such as construction, electronics, automotive, and more, we have become synonymous with quality and precision.
-            </p>
+      <!-- Contact Form starts -->
+      <!-- <section class="min-h-auto flex items-center justify-center py-20 bg-gray-100 px-4">
+        <div class="bg-white rounded-2xl shadow-lg flex flex-col sm:flex-row max-w-lg sm:max-w-4xl w-full">
             
-
-            <!-- Icon Section -->
-            <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center" >
-              <div class="transition-transform transform hover:scale-110">
-                <img src="assets/icons/expertise.png" alt="Decades of Expertise" class="mx-auto w-10 sm:w-12">
-                <p class="mt-2 text-xs sm:text-sm font-semibold">Decades Of<br>Expertise</p>
-              </div>
-              <div class="transition-transform transform hover:scale-110">
-                <img src="assets/icons/global-reach.png" alt="Global Reach" class="mx-auto w-10 sm:w-12">
-                <p class="mt-2 text-xs sm:text-sm font-semibold">Global<br>Reach</p>
-              </div>
-              <div class="transition-transform transform hover:scale-110">
-                <img src="assets/icons/quality.png" alt="Uncompromising Quality" class="mx-auto w-10 sm:w-12">
-                <p class="mt-2 text-xs sm:text-sm font-semibold">Uncompromising<br>Quality</p>
-              </div>
-              <div class="transition-transform transform hover:scale-110">
-                <img src="assets/icons/customizable.png" alt="Customized Solutions" class="mx-auto w-10 sm:w-12">
-                <p class="mt-2 text-xs sm:text-sm font-semibold">Customized<br>Solutions</p>
-              </div>
+            <div class="w-full sm:w-1/3 bg-[#000053] text-white p-6 sm:p-8 rounded-2xl ">
+                <h2 class="text-xl sm:text-2xl font-semibold mb-4">Get in Touch</h2>
+                <p class="mb-2 text-sm sm:text-base">500 Terry Francine St.</p>
+                <p class="mb-2 text-sm sm:text-base">San Francisco, CA 94158</p>
+                <p class="mb-2 text-sm sm:text-base">123-456-7890</p>
+                <p class="mb-6 text-sm sm:text-base">info@mysite.com</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-white text-xl sm:text-2xl"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-white text-xl sm:text-2xl"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-white text-xl sm:text-2xl"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white text-xl sm:text-2xl"><i class="fab fa-youtube"></i></a>
+                </div>
             </div>
+
+            
+            <div class="w-full sm:w-2/3 p-6 sm:p-8 bg-[#f7fef9] rounded-b-2xl sm:rounded-b-none sm:rounded-r-2xl">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm sm:text-base text-[#000053]">Name</label>
+                        <input type="text" class="w-full border-b border-blue-900 outline-none p-2 bg-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-sm sm:text-base text-[#000053]">Contact No. *</label>
+                        <input type="text" class="w-full border-b border-blue-900 outline-none p-2 bg-transparent">
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <label class="block text-sm sm:text-base text-[#000053]">Email *</label>
+                    <input type="email" class="w-full border-b border-blue-900 outline-none p-2 bg-transparent">
+                </div>
+                <div class="mt-4">
+                    <label class="block text-sm sm:text-base text-[#000053]">Message</label>
+                    <textarea class="w-full border-b border-blue-900 outline-none p-2 bg-transparent"></textarea>
+                </div>
+                <div class="mt-6 text-left">
+                    <button class="border border-[#000053] w-full sm:w-40 text-blue-900 px-6 py-2 rounded-full hover:bg-blue-900 hover:text-white transition-all">
+                        Send
+                    </button>
+                </div>
+            </div>
+        </div>
+      </section> -->
+      <!-- Contact Form ends -->
+
+      <!-- Contact Section -->
+        <section class="max-w-5xl mx-auto my-16  bg-white shadow-lg rounded-lg relative px-4 md:px-0">
+          <div class="flex flex-col md:flex-row">
+          <!-- Left Side: Contact Information (1/3 Width) -->
+          <div class="relative bg-[#000053] text-white p-8 rounded-t-lg md:rounded-l-lg md:rounded-tr-none md:w-1/3 flex flex-col justify-between overflow-hidden">
+              <div>
+              <h2 class="text-3xl font-bold mb-8">Contact Information</h2>
+              <div class="space-y-4">
+                  <div class="flex items-center">
+                  <i class="fas fa-phone mr-4"></i>
+                  <a href="tel:+911234567890" class="hover:text-gray-300">+91 1234567890</a>
+                  </div>
+                  <div class="flex items-center">
+                  <i class="fas fa-envelope mr-4"></i>
+                  <a href="mailto:info@kwd.com" class="hover:text-gray-300">info@kwd.com</a>
+                  </div>
+                  <div class="flex space-x-4">
+                    <a href="#" class="text-white text-xl sm:text-2xl"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-white text-xl sm:text-2xl"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-white text-xl sm:text-2xl"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white text-xl sm:text-2xl"><i class="fab fa-youtube"></i></a>
+                </div>
+              </div>
+              </div>
+              
+              <!-- Large Decorative Circles -->
+              <div class="absolute -bottom-3 -right-32">
+              <div class="relative">
+                  <div class="w-60 h-60 bg-[#f3fff6] rounded-full opacity-90"></div>
+                  <div class="w-28 h-28 bg-gray-500 rounded-full opacity-60 absolute -bottom-5 -left-4"></div>
+              </div>
+              </div>
           </div>
+          
+
+          <!-- Right Side: Contact Form (2/3 Width) -->
+          <div class="p-8 md:w-2/3 text-[#000053] pt-12 ">
+              <form action="#" method="POST" class="space-y-6">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 ">
+                  <div>
+                  <label for="first-name" class="block ">Your Name</label>
+                  <input type="text" id="first-name" name="first-name" class="w-full border-b border-gray-300 focus:border-gray-500 outline-none p-1" placeholder="John Doe">
+                  </div>
+                  <div>
+                  <label for="last-name" class="block ">Company Name</label>
+                  <input type="text" id="last-name" name="last-name" class="w-full border-b border-gray-300 focus:border-gray-500 outline-none p-1" placeholder="eg: Fixomech">
+                  </div>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div>
+                  <label for="email" class="block ">Your Email</label>
+                  <input type="email" id="email" name="email" class="w-full border-b border-gray-300 focus:border-gray-500 outline-none p-1" placeholder="you@example.com">
+                  </div>
+                  <div>
+                  <label for="phone" class="block">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" class="w-full border-b border-gray-300 focus:border-gray-500 outline-none p-1" placeholder="+1 012 3456 789">
+                  </div>
+              </div>
+              <div>
+                  <label for="country" class="block ">Country</label>
+                  <input type="text" id="country" name="country" class="w-full border-b border-gray-300 focus:border-gray-500 outline-none p-1" placeholder="Country">
+              </div>
+              <div>
+                  <label for="message" class="block ">Message</label>
+                  <textarea id="message" name="message" class="w-full border-b border-gray-300 focus:border-gray-500 outline-none p-1" rows="4" placeholder="Write your message.."></textarea>
+              </div>
+              <button type="submit" class="w-full sm:w-auto px-6 py-3 border border-[#000053] text-[#000053] font-semibold rounded-full hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50">
+                  Send Message
+              </button>
+              </form>
+          </div>
+          </div>
+      </section>
+
+      <!-- Google Map Section -->
+        <section class="w-full mt-16">
+            <div class="w-full h-80 md:h-96">
+            <!-- Embed Google Map -->
+            <iframe class="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.781888026011!2d72.96792317520858!3d19.204726582026566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b93e180af03b%3A0xe6724e678c1117b7!2sPunjani%20Industrial%20Estate%2C%20Khopat%20Rd%2C%20Hans%20Nagar%2C%20Thane%20West%2C%20Thane%2C%20Maharashtra%20400601!5e0!3m2!1sen!2sin!4v1737726238157!5m2!1sen!2sin"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </section>
-      </div>
-      <!-- About Section End -->
-
-      <!-- Directors section start -->
-      <section class="py-16 text-center px-6 md:px-40 overflow-hidden" data-aos="fade-up">
-        <div class="container mx-auto px-6 lg:px-8">
-          <h2 class="text-xl font-medium sm:text-5xl text-[#000053]">Meet The Directors</h2>
-            <hr class="border-[#cd5634] w-32 sm:w-40 m-4 mx-auto">
-              <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up">
-                <!-- Director 1 -->
-                <div class="flex flex-col items-center">
-                    <div class="w-48 h-48 rounded-full overflow-hidden">
-                        <img src="assets/img/director1.png" alt="Late Avsharan Singh Khurana" class="w-full h-full object-cover">
-                    </div>
-                    <h2 class="mt-4 text-xl md:text-2xl font-medium text-[#000053]">Late Avsharan Singh Khurana</h2>
-                    <p class="text-gray-600 py-3">Chief Director</p>
-                </div>
-
-                <!-- Director 2 -->
-                <div class="flex flex-col items-center">
-                    <div class="w-48 h-48 rounded-full overflow-hidden">
-                        <img src="assets/img/director2.png" alt="Harvinder S. Khurana" class="w-full h-full object-cover">
-                    </div>
-                    <h2 class="mt-4 text-xl md:text-2xl font-medium text-[#000053]">Harvinder S. Khurana</h2>
-                    <p class="text-gray-600 py-3">Director</p>
-                </div>
-
-                <!-- Director 3 -->
-                <div class="flex flex-col items-center">
-                    <div class="w-48 h-48 rounded-full overflow-hidden">
-                        <img src="assets/img/director3.png" alt="Pervinder Khurana" class="w-full h-full object-cover">
-                    </div>
-                    <h2 class="mt-4 text-xl md:text-2xl font-medium text-[#000053]">Pervinder Khurana</h2>
-                    <p class="text-gray-600 py-3">Director</p>
-                </div>
-            </div>
-        </div>
-      </section>
-      <!-- Directors section end -->
-
-      <!-- Certificates Section Start -->
-      <div class="bg-gray-100 text-[#000053] py-16 px-6 md:px-12" data-aos="fade-up">
-        <div class="max-w-6xl mx-auto text-center">
-          <h2 class="text-4xl md:text-5xl font-medium leading-tight">
-            Certificates & Accreditations
-          </h2>
-          <hr class="border-[#cd5634] w-20 md:w-40 my-4 mx-auto">
-          <p class="text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
-            At Khurana Wire Drawing Dies, quality and reliability are at the core of everything we do. 
-            Our certifications are a testament to our unwavering dedication to meeting global standards 
-            and delivering the best to our clients.
-          </p>
-
-          <!-- Certification Cards -->
-          <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
-            <!-- ISO 9001 Certified -->
-            <div class="text-center">
-              <img 
-                src="assets/img/certificate1.avif" 
-                alt="ISO 9001:2015 Certified" 
-                class="mx-auto w-24 sm:w-28 md:w-32 rounded-full"
-              >
-              <h3 class="text-lg sm:text-xl font-semibold mt-4">
-                ISO 9001 : 2015 Certified
-              </h3>
-              <p class="mt-2 text-xs sm:text-sm max-w-xs mx-auto">
-                Ensuring consistent quality management and superior product performance.
-              </p>
-            </div>
-
-            <!-- Trusted Supplier Certification -->
-            <div class="text-center">
-              <img 
-                src="assets/img/certificate2.avif" 
-                alt="Trusted Supplier Certifications" 
-                class="mx-auto w-24 sm:w-28 md:w-32 rounded-full"
-              >
-              <h3 class="text-lg sm:text-xl font-semibold mt-4">
-                Trusted Supplier Certifications
-              </h3>
-              <p class="mt-2 text-xs sm:text-sm max-w-xs mx-auto">
-                Acknowledged by leading industries for our dependable and high-quality solutions.
-              </p>
-            </div>
-
-            <!-- Global Client Approvals -->
-            <div class="text-center">
-              <img 
-                src="assets/img/certificate3.avif" 
-                alt="Global Client Approvals" 
-                class="mx-auto w-24 sm:w-28 md:w-32 rounded-full"
-              >
-              <h3 class="text-lg sm:text-xl font-semibold mt-4">
-                Global Client Approvals
-              </h3>
-              <p class="mt-2 text-xs sm:text-sm max-w-xs mx-auto">
-                Certified by numerous international clients, reflecting our commitment to excellence across borders.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Certificates Section End -->
-
-      <!-- Our Clientele Section ends-->
-      <section class="py-16" data-aos="fade-up">
-          <div class="container mx-auto px-4 md:px-40">
-    <h2 class="text-4xl text-center mb-4 text-gray-800">Trusted By Industry Leaders</h2>
-    <hr class="border-[#cd5634] w-32 sm:w-40 m-4 mx-auto mb-12">
-    <div class="relative overflow-hidden" data-aos="zoom-in">
-                <!-- Logo Slider Container -->
-                <div id="logoSlider" class="flex space-x-12">
-                    <!-- Logo Group 1 -->
-                    <div class="flex-shrink-0 flex space-x-12 items-center">
-                        <img src="assets/client1.png" alt="Client Logo" class="h-12 w-auto  transition-all duration-300">
-                        <img src="assets/client2.png" alt="Client Logo" class="h-12 w-auto  transition-all duration-300">
-                        <img src="assets/client3.png" alt="Client Logo" class="h-12 w-auto  transition-all duration-300">
-                        <img src="assets/client4.png" alt="Client Logo" class="h-12 w-auto  transition-all duration-300">
-                        <img src="assets/client5.png" alt="Client Logo" class="h-12 w-auto  transition-all duration-300">
-                        <img src="assets/client6.png" alt="Client Logo" class="h-12 w-auto  transition-all duration-300">
-                    </div>
-                    <!-- Logo Group 2 (Duplicate for seamless loop) -->
-                    <div class="flex-shrink-0 flex space-x-12 items-center">
-                        <img src="assets/client1.png" alt="Client Logo" class="h-12 w-auto  transition-all duration-300">
-                        <img src="assets/client2.png" alt="Client Logo" class="h-12 w-auto  transition-all duration-300">
-                        <img src="assets/client3.png" alt="Client Logo" class="h-12 w-auto  transition-all duration-300">
-                        <img src="assets/client4.png" alt="Client Logo" class="h-12 w-auto  transition-all duration-300">
-                        <img src="assets/client5.png" alt="Client Logo" class="h-12 w-auto  transition-all duration-300">
-                        <img src="assets/client6.png" alt="Client Logo" class="h-12 w-auto  transition-all duration-300">
-                    </div>
-                    <!-- Logo Group 3 (Duplicate for seamless loop) -->
-                    <div class="flex-shrink-0 flex space-x-12 items-center">
-                        <img src="assets/client1.png" alt="Client Logo" class="h-12 w-auto  transition-all duration-300">
-                        <img src="assets/client2.png" alt="Client Logo" class="h-12 w-auto  transition-all duration-300">
-                        <img src="assets/client3.png" alt="Client Logo" class="h-12 w-auto  transition-all duration-300">
-                        <img src="assets/client4.png" alt="Client Logo" class="h-12 w-auto  transition-all duration-300">
-                        <img src="assets/client5.png" alt="Client Logo" class="h-12 w-auto  transition-all duration-300">
-                        <img src="assets/client6.png" alt="Client Logo" class="h-12 w-auto  transition-all duration-300">
-                    </div>
-                </div>
-            </div>
-          </div>
-      </section>
-      <!-- Our Clientele Section ends-->
 
       <!-- Footer -->
       <footer class="py-16 px-6 lg:px-40 bg-[#000053] text-white">
@@ -491,20 +411,23 @@
           </div>
       </footer>
 
+      <!-- Scroll to Top Button -->
+      <!-- <button id="scrollToTopBtn" class="scroll-to-top-btn  text-white text-4xl z-50">
+        <i class="fa-regular fa-circle-up"></i>
+      </button> -->
+
+
+      <!-- WhatsApp Button HTML -->
+      <!-- <a class="whatsapp-button" href="https://wa.me/9112000" target="_blank" title="Chat with us on WhatsApp"> 
+          <img src="assets/img/icon/whatsapp.png" alt="WhatsApp" class="whatsapp-icon"/>
+      </a> -->
+          
+
     </div>
       
     <!--End of Tawk.to Script-->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        AOS.init({
-          duration: 1000, // Animation duration in milliseconds
-          once: true, // Whether animation should happen only once
-          offset: 200, // Offset from the original trigger point
-        });
-      });
-    </script>
-    
+
     <script src="script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
   </body>
 </html>

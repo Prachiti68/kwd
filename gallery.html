@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
     <link href="style.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="animation.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   </head>
@@ -174,8 +176,7 @@
 
         <!-- Content Container -->
         <div class="relative container mx-auto py-16 px-8 md:px-40 text-center w-full">
-          <h1 class="text-3xl md:text-5xl font-Playfair">About Us</h1>
-          
+          <h1 class="text-3xl md:text-5xl font-Playfair">Gallery</h1>
         </div>
 
         <!-- Breadcrumbs -->
@@ -186,224 +187,16 @@
             </li>
             <li>/</li>
             <li>
-              <a href="about.html" class="text-white font-medium">About</a>
+              <a href="gallery.html" class="text-white font-medium">Gallery</a>
             </li>
           </ul>
         </nav>
       </section>
       <!--About Hero Section Ends -->
 
-      <!-- Celebrating 60 years section starts-->
-      <div class="relative text-[#000053] bg-[#f7fef9] py-16 lg:py-20 px-4 sm:px-6 lg:px-8" data-aos="fade-up">
-        <!-- Left Background Image -->
-        <div class="absolute top-0 left-0 w-1/4 h-full bg-no-repeat bg-cover opacity-20 hidden sm:block" style="background-image: url('/assets/img/15.png');"></div>
-      
-        <!-- Right Background Image -->
-        <div class="absolute top-0 right-0 w-1/4 h-full bg-no-repeat bg-cover opacity-20 hidden sm:block" style="background-image: url('/assets/img/11.png');"></div>
-      
-        <div class="relative max-w-2xl mx-auto text-center">
-          <h2 class="text-xl font-medium sm:text-5xl">Celebrating 60 Years of Excellence</h2>
-          <hr class="border-[#cd5634] w-24 sm:w-40 m-4 mx-auto">
-          <h5 class="mt-4 text-lg sm:text-xl font-medium">A Legacy of Innovation and Precision</h5>
-          <p class="mt-2 md:mt-6 text-sm sm:text-base md:text-md">
-            Since 1965, Khurana Wire Drawing Dies has been a trusted name in the wire drawing industry. As we mark our 60th anniversary, we celebrate six decades of delivering exceptional quality, customer satisfaction, and groundbreaking innovation. Our journey reflects a commitment to precision and excellence, earning the trust of industries across the globe.
-          </p>
-        </div>
-      </div>
-      <!-- celebrating 60 years section ends-->
-      
-      <!-- About Section Start -->
-      <div class="bg-[#f3fff6] text-[#000053] px-6 md:px-20 overflow-hidden ">
-        <section class="max-w-7xl mx-auto py-16 flex flex-col md:flex-row items-center gap-12 " data-aos="fade-up">
-          <!-- Images Section -->
-          <div class="relative w-full md:w-1/2 flex justify-center" data-aos="zoom-in">
-            <div class="relative w-[300px] sm:w-[350px] md:w-[400px] h-[300px] sm:h-[350px] md:h-[400px]">
-              <img src="assets/img/aboutcompany.png" alt="Product Image" 
-                class="absolute -top-8 sm:-top-10 -right-8 sm:-right-10 z-10 w-3/4 rounded-lg shadow-lg transition-transform transform hover:scale-105">
-              <img src="assets/img/1.avif" alt="Product Image" 
-                class="absolute -bottom-8 sm:-bottom-10 -left-8 sm:-left-10 w-3/4 bg-[#f3bc88] rounded-lg transition-transform transform hover:scale-105">
-            </div>
-          </div>
-
-          <!-- Content Section -->
-          <div class="w-full md:w-1/2 p-6 sm:p-8" data-aos="fade-left">
-            <h2 class="text-4xl sm:text-5xl md:text-5xl font-medium text-[#000053] pb-4 mb-2 transition-colors hover:text-[#cd5634]">
-              About Our Journey
-            </h2>
-            <hr class="border-[#cd5634] w-32 sm:w-40 mb-4" data-aos="fade-left">
-            <h3 class="text-xl sm:text-2xl font-medium text-[#000053] transition-colors hover:text-[#cd5634]">
-              Legacy Continues
-            </h3>
-            <p class="mt-4 text-sm sm:text-base md:text-md" data-aos="fade-left">
-              Khurana Wire Drawing Dies was founded in 1965 by Late Avsharan Singh Khurana with a vision to create world-class wire drawing solutions. What began as a small endeavor has grown into a global enterprise, recognized for unmatched quality and reliability. Over the years, we have embraced innovation, adopted cutting-edge technology, and stayed true to our founder’s values of integrity and customer-centricity. At Khurana Wire Drawing Dies, we specialize in manufacturing premium Tungsten Carbide (TC) and Polycrystalline Diamond (PCD) dies. Serving industries such as construction, electronics, automotive, and more, we have become synonymous with quality and precision.
-            </p>
-            
-
-            <!-- Icon Section -->
-            <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center" >
-              <div class="transition-transform transform hover:scale-110">
-                <img src="assets/icons/expertise.png" alt="Decades of Expertise" class="mx-auto w-10 sm:w-12">
-                <p class="mt-2 text-xs sm:text-sm font-semibold">Decades Of<br>Expertise</p>
-              </div>
-              <div class="transition-transform transform hover:scale-110">
-                <img src="assets/icons/global-reach.png" alt="Global Reach" class="mx-auto w-10 sm:w-12">
-                <p class="mt-2 text-xs sm:text-sm font-semibold">Global<br>Reach</p>
-              </div>
-              <div class="transition-transform transform hover:scale-110">
-                <img src="assets/icons/quality.png" alt="Uncompromising Quality" class="mx-auto w-10 sm:w-12">
-                <p class="mt-2 text-xs sm:text-sm font-semibold">Uncompromising<br>Quality</p>
-              </div>
-              <div class="transition-transform transform hover:scale-110">
-                <img src="assets/icons/customizable.png" alt="Customized Solutions" class="mx-auto w-10 sm:w-12">
-                <p class="mt-2 text-xs sm:text-sm font-semibold">Customized<br>Solutions</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <!-- About Section End -->
-
-      <!-- Directors section start -->
-      <section class="py-16 text-center px-6 md:px-40 overflow-hidden" data-aos="fade-up">
-        <div class="container mx-auto px-6 lg:px-8">
-          <h2 class="text-xl font-medium sm:text-5xl text-[#000053]">Meet The Directors</h2>
-            <hr class="border-[#cd5634] w-32 sm:w-40 m-4 mx-auto">
-              <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up">
-                <!-- Director 1 -->
-                <div class="flex flex-col items-center">
-                    <div class="w-48 h-48 rounded-full overflow-hidden">
-                        <img src="assets/img/director1.png" alt="Late Avsharan Singh Khurana" class="w-full h-full object-cover">
-                    </div>
-                    <h2 class="mt-4 text-xl md:text-2xl font-medium text-[#000053]">Late Avsharan Singh Khurana</h2>
-                    <p class="text-gray-600 py-3">Chief Director</p>
-                </div>
-
-                <!-- Director 2 -->
-                <div class="flex flex-col items-center">
-                    <div class="w-48 h-48 rounded-full overflow-hidden">
-                        <img src="assets/img/director2.png" alt="Harvinder S. Khurana" class="w-full h-full object-cover">
-                    </div>
-                    <h2 class="mt-4 text-xl md:text-2xl font-medium text-[#000053]">Harvinder S. Khurana</h2>
-                    <p class="text-gray-600 py-3">Director</p>
-                </div>
-
-                <!-- Director 3 -->
-                <div class="flex flex-col items-center">
-                    <div class="w-48 h-48 rounded-full overflow-hidden">
-                        <img src="assets/img/director3.png" alt="Pervinder Khurana" class="w-full h-full object-cover">
-                    </div>
-                    <h2 class="mt-4 text-xl md:text-2xl font-medium text-[#000053]">Pervinder Khurana</h2>
-                    <p class="text-gray-600 py-3">Director</p>
-                </div>
-            </div>
-        </div>
-      </section>
-      <!-- Directors section end -->
-
-      <!-- Certificates Section Start -->
-      <div class="bg-gray-100 text-[#000053] py-16 px-6 md:px-12" data-aos="fade-up">
-        <div class="max-w-6xl mx-auto text-center">
-          <h2 class="text-4xl md:text-5xl font-medium leading-tight">
-            Certificates & Accreditations
-          </h2>
-          <hr class="border-[#cd5634] w-20 md:w-40 my-4 mx-auto">
-          <p class="text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
-            At Khurana Wire Drawing Dies, quality and reliability are at the core of everything we do. 
-            Our certifications are a testament to our unwavering dedication to meeting global standards 
-            and delivering the best to our clients.
-          </p>
-
-          <!-- Certification Cards -->
-          <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
-            <!-- ISO 9001 Certified -->
-            <div class="text-center">
-              <img 
-                src="assets/img/certificate1.avif" 
-                alt="ISO 9001:2015 Certified" 
-                class="mx-auto w-24 sm:w-28 md:w-32 rounded-full"
-              >
-              <h3 class="text-lg sm:text-xl font-semibold mt-4">
-                ISO 9001 : 2015 Certified
-              </h3>
-              <p class="mt-2 text-xs sm:text-sm max-w-xs mx-auto">
-                Ensuring consistent quality management and superior product performance.
-              </p>
-            </div>
-
-            <!-- Trusted Supplier Certification -->
-            <div class="text-center">
-              <img 
-                src="assets/img/certificate2.avif" 
-                alt="Trusted Supplier Certifications" 
-                class="mx-auto w-24 sm:w-28 md:w-32 rounded-full"
-              >
-              <h3 class="text-lg sm:text-xl font-semibold mt-4">
-                Trusted Supplier Certifications
-              </h3>
-              <p class="mt-2 text-xs sm:text-sm max-w-xs mx-auto">
-                Acknowledged by leading industries for our dependable and high-quality solutions.
-              </p>
-            </div>
-
-            <!-- Global Client Approvals -->
-            <div class="text-center">
-              <img 
-                src="assets/img/certificate3.avif" 
-                alt="Global Client Approvals" 
-                class="mx-auto w-24 sm:w-28 md:w-32 rounded-full"
-              >
-              <h3 class="text-lg sm:text-xl font-semibold mt-4">
-                Global Client Approvals
-              </h3>
-              <p class="mt-2 text-xs sm:text-sm max-w-xs mx-auto">
-                Certified by numerous international clients, reflecting our commitment to excellence across borders.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Certificates Section End -->
-
-      <!-- Our Clientele Section ends-->
-      <section class="py-16" data-aos="fade-up">
-          <div class="container mx-auto px-4 md:px-40">
-    <h2 class="text-4xl text-center mb-4 text-gray-800">Trusted By Industry Leaders</h2>
-    <hr class="border-[#cd5634] w-32 sm:w-40 m-4 mx-auto mb-12">
-    <div class="relative overflow-hidden" data-aos="zoom-in">
-                <!-- Logo Slider Container -->
-                <div id="logoSlider" class="flex space-x-12">
-                    <!-- Logo Group 1 -->
-                    <div class="flex-shrink-0 flex space-x-12 items-center">
-                        <img src="assets/client1.png" alt="Client Logo" class="h-12 w-auto  transition-all duration-300">
-                        <img src="assets/client2.png" alt="Client Logo" class="h-12 w-auto  transition-all duration-300">
-                        <img src="assets/client3.png" alt="Client Logo" class="h-12 w-auto  transition-all duration-300">
-                        <img src="assets/client4.png" alt="Client Logo" class="h-12 w-auto  transition-all duration-300">
-                        <img src="assets/client5.png" alt="Client Logo" class="h-12 w-auto  transition-all duration-300">
-                        <img src="assets/client6.png" alt="Client Logo" class="h-12 w-auto  transition-all duration-300">
-                    </div>
-                    <!-- Logo Group 2 (Duplicate for seamless loop) -->
-                    <div class="flex-shrink-0 flex space-x-12 items-center">
-                        <img src="assets/client1.png" alt="Client Logo" class="h-12 w-auto  transition-all duration-300">
-                        <img src="assets/client2.png" alt="Client Logo" class="h-12 w-auto  transition-all duration-300">
-                        <img src="assets/client3.png" alt="Client Logo" class="h-12 w-auto  transition-all duration-300">
-                        <img src="assets/client4.png" alt="Client Logo" class="h-12 w-auto  transition-all duration-300">
-                        <img src="assets/client5.png" alt="Client Logo" class="h-12 w-auto  transition-all duration-300">
-                        <img src="assets/client6.png" alt="Client Logo" class="h-12 w-auto  transition-all duration-300">
-                    </div>
-                    <!-- Logo Group 3 (Duplicate for seamless loop) -->
-                    <div class="flex-shrink-0 flex space-x-12 items-center">
-                        <img src="assets/client1.png" alt="Client Logo" class="h-12 w-auto  transition-all duration-300">
-                        <img src="assets/client2.png" alt="Client Logo" class="h-12 w-auto  transition-all duration-300">
-                        <img src="assets/client3.png" alt="Client Logo" class="h-12 w-auto  transition-all duration-300">
-                        <img src="assets/client4.png" alt="Client Logo" class="h-12 w-auto  transition-all duration-300">
-                        <img src="assets/client5.png" alt="Client Logo" class="h-12 w-auto  transition-all duration-300">
-                        <img src="assets/client6.png" alt="Client Logo" class="h-12 w-auto  transition-all duration-300">
-                    </div>
-                </div>
-            </div>
-          </div>
-      </section>
-      <!-- Our Clientele Section ends-->
+      <!-- Contact Section -->
+      <section class="max-w-5xl mx-auto my-16  bg-white shadow-lg rounded-lg relative px-4 md:px-0">
+    </section>
 
       <!-- Footer -->
       <footer class="py-16 px-6 lg:px-40 bg-[#000053] text-white">
@@ -491,20 +284,23 @@
           </div>
       </footer>
 
+      <!-- Scroll to Top Button -->
+      <!-- <button id="scrollToTopBtn" class="scroll-to-top-btn  text-white text-4xl z-50">
+        <i class="fa-regular fa-circle-up"></i>
+      </button> -->
+
+
+      <!-- WhatsApp Button HTML -->
+      <!-- <a class="whatsapp-button" href="https://wa.me/9112000" target="_blank" title="Chat with us on WhatsApp"> 
+          <img src="assets/img/icon/whatsapp.png" alt="WhatsApp" class="whatsapp-icon"/>
+      </a> -->
+          
+
     </div>
       
     <!--End of Tawk.to Script-->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        AOS.init({
-          duration: 1000, // Animation duration in milliseconds
-          once: true, // Whether animation should happen only once
-          offset: 200, // Offset from the original trigger point
-        });
-      });
-    </script>
-    
+
     <script src="script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
   </body>
 </html>

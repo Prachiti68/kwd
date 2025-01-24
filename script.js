@@ -25,6 +25,35 @@ if (productsMenu && productsDropdown) {
     });
 }
 
+//hAMBURGER MENU --------------------------------------------------------------------------
+// Select the hamburger menu button and mobile menu elements
+const mobileMenuButton = document.getElementById('mobileMenuButton');
+const mobileMenu = document.getElementById('mobileMenu');
+
+// Add an event listener to the hamburger menu button
+mobileMenuButton.addEventListener('click', () => {
+  // Toggle the 'hidden' class on the mobile menu
+  mobileMenu.classList.toggle('hidden');
+
+  // Add a smooth transition for better UX
+  if (!mobileMenu.classList.contains('hidden')) {
+    mobileMenu.style.transition = 'all 0.3s ease-in-out';
+    mobileMenu.style.opacity = '1';
+  } else {
+    mobileMenu.style.opacity = '0';
+  }
+});
+
+// Optional: Close the menu when clicking outside of it
+document.addEventListener('click', (event) => {
+  if (
+    !mobileMenu.contains(event.target) && // If the click is not inside the menu
+    !mobileMenuButton.contains(event.target) // And not on the hamburger button
+  ) {
+    mobileMenu.classList.add('hidden'); // Hide the menu
+  }
+});
+
 // back to top button ------------------------------------------------------------------------
 var mybutton = document.getElementById("scrollToTopBtn");
 
@@ -217,7 +246,7 @@ setInterval(() => {
 
 // Initialize AOS -------------------------------------------------------------------
 AOS.init({
-    duration: 1500,  // Animation duration in milliseconds (default is 400)
+    duration: 1000,  // Animation duration in milliseconds (default is 400)
     easing: 'ease-in-out',  // Easing function for smoothness
     delay: 300,  // Delay before the animation starts
     once: true,  // Animation happens only once while scrolling
@@ -263,3 +292,26 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// Clintele scroll --------------------------------------------------------------------------------------
+document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.getElementById('logoSlider');
+    const firstGroup = slider.children[0];
+    let position = 0;
+    const speed = 1; // Adjust speed as needed
+    
+    function animate() {
+        position -= speed;
+        
+        // When first group is fully scrolled, reset position
+        if (-position >= firstGroup.offsetWidth) {
+            position = 0;
+        }
+        
+        // Apply transform with hardware acceleration
+        slider.style.transform = `translate3d(${position}px, 0, 0)`;
+        requestAnimationFrame(animate);
+    }
+    
+    // Start animation
+    animate();
+});
