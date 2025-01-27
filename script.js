@@ -124,48 +124,59 @@ document.addEventListener("DOMContentLoaded", function () {
     const prevBtn = document.getElementById("prevBtn");
     const nextBtn = document.getElementById("nextBtn");
 
-    let slideWidth = track.children[0].offsetWidth;
-    let currentIndex = 0;
-    let isDragging = false;
-    let startX, currentTranslate, prevTranslate, animationID;
-    
-    // Clone slides to create an infinite loop effect
-    function setupInfiniteLoop() {
-      const slides = [...track.children];
+    let slides = [...track.children];
+    let slideWidth = slides[0].offsetWidth;
+    let isDragging = false, startX, currentTranslate, prevTranslate;
+    let currentIndex = slides.length;
+
+    // Duplicate slides for seamless infinite scrolling
+    function duplicateSlides() {
       slides.forEach(slide => {
-        track.appendChild(slide.cloneNode(true));
+        let clone = slide.cloneNode(true);
+        track.appendChild(clone);
+      });
+      slides.forEach(slide => {
+        let clone = slide.cloneNode(true);
+        track.insertBefore(clone, track.firstChild);
       });
     }
-    setupInfiniteLoop();
 
-    // Move to a specific slide
+    duplicateSlides();
+
+    // Position track to show original slides first
+    track.style.transform = `translateX(-${slideWidth * slides.length}px)`;
+
     function moveToSlide(index) {
       track.style.transition = "transform 0.5s ease-in-out";
       currentTranslate = -index * slideWidth;
       track.style.transform = `translateX(${currentTranslate}px)`;
-      currentIndex = index;
     }
 
-    // Handle button clicks
+    function handleTransitionEnd() {
+      if (currentIndex === 0) {
+        track.style.transition = "none";
+        currentIndex = slides.length;
+        track.style.transform = `translateX(-${slideWidth * slides.length}px)`;
+      } else if (currentIndex === slides.length * 2) {
+        track.style.transition = "none";
+        currentIndex = slides.length;
+        track.style.transform = `translateX(-${slideWidth * slides.length}px)`;
+      }
+    }
+
+    track.addEventListener("transitionend", handleTransitionEnd);
+
     prevBtn.addEventListener("click", () => {
       if (currentIndex > 0) {
-        moveToSlide(currentIndex - 1);
-      } else {
-        track.style.transition = "none";
-        currentIndex = track.children.length / 2;
-        track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-        setTimeout(() => moveToSlide(currentIndex - 1), 50);
+        currentIndex--;
+        moveToSlide(currentIndex);
       }
     });
 
     nextBtn.addEventListener("click", () => {
-      if (currentIndex < track.children.length / 2 - 1) {
-        moveToSlide(currentIndex + 1);
-      } else {
-        track.style.transition = "none";
-        currentIndex = 0;
-        track.style.transform = `translateX(0px)`;
-        setTimeout(() => moveToSlide(1), 50);
+      if (currentIndex < slides.length * 2) {
+        currentIndex++;
+        moveToSlide(currentIndex);
       }
     });
 
@@ -175,7 +186,6 @@ document.addEventListener("DOMContentLoaded", function () {
       startX = e.type.includes("touch") ? e.touches[0].clientX : e.clientX;
       prevTranslate = currentTranslate;
       track.style.transition = "none";
-      animationID = requestAnimationFrame(animation);
     }
 
     function dragMove(e) {
@@ -186,22 +196,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function dragEnd() {
-      cancelAnimationFrame(animationID);
       isDragging = false;
       const movedBy = currentTranslate - prevTranslate;
 
-      if (movedBy < -50 && currentIndex < track.children.length / 2 - 1) {
-        moveToSlide(currentIndex + 1);
-      } else if (movedBy > 50 && currentIndex > 0) {
-        moveToSlide(currentIndex - 1);
-      } else {
-        moveToSlide(currentIndex);
+      if (movedBy < -50) {
+        currentIndex++;
+      } else if (movedBy > 50) {
+        currentIndex--;
       }
-    }
 
-    function animation() {
-      track.style.transform = `translateX(${currentTranslate}px)`;
-      if (isDragging) requestAnimationFrame(animation);
+      moveToSlide(currentIndex);
     }
 
     // Add event listeners for drag support
@@ -220,7 +224,7 @@ document.addEventListener("DOMContentLoaded", function () {
       moveToSlide(currentIndex);
     });
 
-    moveToSlide(0);
+    moveToSlide(currentIndex);
   });
 
 // Hero section carousel functionality ----------------------------------------------------------
