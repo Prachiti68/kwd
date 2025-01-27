@@ -119,93 +119,109 @@ if (formSubmission) {
 }
 
 // products carousel functionality -------------------------------------------------------------
-const track = document.getElementById('carouselTrack');
-const slides = Array.from(track.children);
-const nextButton = document.getElementById('nextBtn');
-const prevButton = document.getElementById('prevBtn');
-let currentIndex = 0;
-let startX = 0;
-let isDragging = false;
+document.addEventListener("DOMContentLoaded", function () {
+    const track = document.getElementById("carouselTrack");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
 
-// Clone first 4 slides and append to end for infinite loop
-const firstFourSlides = slides.slice(0, 4);
-firstFourSlides.forEach(slide => {
-    const clone = slide.cloneNode(true);
-    track.appendChild(clone);
-});
+    let slideWidth = track.children[0].offsetWidth;
+    let currentIndex = 0;
+    let isDragging = false;
+    let startX, currentTranslate, prevTranslate, animationID;
+    
+    // Clone slides to create an infinite loop effect
+    function setupInfiniteLoop() {
+      const slides = [...track.children];
+      slides.forEach(slide => {
+        track.appendChild(slide.cloneNode(true));
+      });
+    }
+    setupInfiniteLoop();
 
-function updateSlidePosition() {
-    track.style.transition = 'transform 500ms ease-in-out';
-    track.style.transform = `translateX(-${currentIndex * 25}%)`;
-}
+    // Move to a specific slide
+    function moveToSlide(index) {
+      track.style.transition = "transform 0.5s ease-in-out";
+      currentTranslate = -index * slideWidth;
+      track.style.transform = `translateX(${currentTranslate}px)`;
+      currentIndex = index;
+    }
 
-// Move to next slide
-function moveToNextSlide() {
-    currentIndex++;
-    if (currentIndex >= slides.length) {
+    // Handle button clicks
+    prevBtn.addEventListener("click", () => {
+      if (currentIndex > 0) {
+        moveToSlide(currentIndex - 1);
+      } else {
+        track.style.transition = "none";
+        currentIndex = track.children.length / 2;
+        track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+        setTimeout(() => moveToSlide(currentIndex - 1), 50);
+      }
+    });
+
+    nextBtn.addEventListener("click", () => {
+      if (currentIndex < track.children.length / 2 - 1) {
+        moveToSlide(currentIndex + 1);
+      } else {
+        track.style.transition = "none";
         currentIndex = 0;
-        track.style.transition = 'none';
-        updateSlidePosition();
-        setTimeout(() => {
-            track.style.transition = 'transform 500ms ease-in-out';
-        }, 10);
-    } else {
-        updateSlidePosition();
+        track.style.transform = `translateX(0px)`;
+        setTimeout(() => moveToSlide(1), 50);
+      }
+    });
+
+    // Drag functionality
+    function dragStart(e) {
+      isDragging = true;
+      startX = e.type.includes("touch") ? e.touches[0].clientX : e.clientX;
+      prevTranslate = currentTranslate;
+      track.style.transition = "none";
+      animationID = requestAnimationFrame(animation);
     }
-}
 
-// Move to previous slide
-function moveToPrevSlide() {
-    currentIndex--;
-    if (currentIndex < 0) {
-        currentIndex = slides.length - 1;
-        track.style.transition = 'none';
-        updateSlidePosition();
-        setTimeout(() => {
-            track.style.transition = 'transform 500ms ease-in-out';
-        }, 10);
-    } else {
-        updateSlidePosition();
+    function dragMove(e) {
+      if (!isDragging) return;
+      const currentPosition = e.type.includes("touch") ? e.touches[0].clientX : e.clientX;
+      currentTranslate = prevTranslate + (currentPosition - startX);
+      track.style.transform = `translateX(${currentTranslate}px)`;
     }
-}
 
-// Mouse & touch events for dragging
-const handleDragStart = (event) => {
-    isDragging = true;
-    startX = event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
-};
+    function dragEnd() {
+      cancelAnimationFrame(animationID);
+      isDragging = false;
+      const movedBy = currentTranslate - prevTranslate;
 
-const handleDragEnd = (event) => {
-    if (!isDragging) return;
-    isDragging = false;
-
-    let endX = event.type.includes('mouse') ? event.pageX : event.changedTouches[0].clientX;
-    let distance = endX - startX;
-
-    if (distance < -50) {
-        moveToNextSlide();  // Dragged left -> next slide
-    } else if (distance > 50) {
-        moveToPrevSlide();  // Dragged right -> previous slide
+      if (movedBy < -50 && currentIndex < track.children.length / 2 - 1) {
+        moveToSlide(currentIndex + 1);
+      } else if (movedBy > 50 && currentIndex > 0) {
+        moveToSlide(currentIndex - 1);
+      } else {
+        moveToSlide(currentIndex);
+      }
     }
-};
 
-// Event listeners for drag gestures
-track.addEventListener('mousedown', handleDragStart);
-track.addEventListener('mouseup', handleDragEnd);
-track.addEventListener('mouseleave', handleDragEnd);
+    function animation() {
+      track.style.transform = `translateX(${currentTranslate}px)`;
+      if (isDragging) requestAnimationFrame(animation);
+    }
 
-track.addEventListener('touchstart', handleDragStart);
-track.addEventListener('touchend', handleDragEnd);
+    // Add event listeners for drag support
+    track.addEventListener("mousedown", dragStart);
+    track.addEventListener("mousemove", dragMove);
+    track.addEventListener("mouseup", dragEnd);
+    track.addEventListener("mouseleave", dragEnd);
 
-// Auto scroll functionality
-setInterval(() => {
-    moveToNextSlide();
-}, 5000);
+    track.addEventListener("touchstart", dragStart);
+    track.addEventListener("touchmove", dragMove);
+    track.addEventListener("touchend", dragEnd);
 
-// Next and previous button controls
-nextButton.addEventListener('click', moveToNextSlide);
-prevButton.addEventListener('click', moveToPrevSlide);
+    // Handle window resize
+    window.addEventListener("resize", () => {
+      slideWidth = track.children[0].offsetWidth;
+      moveToSlide(currentIndex);
+    });
 
+    moveToSlide(0);
+  });
 
 // Hero section carousel functionality ----------------------------------------------------------
 const heroTrack = document.getElementById('heroCarouselTrack');
