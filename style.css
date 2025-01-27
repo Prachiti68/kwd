@@ -63,6 +63,8 @@ html{
   opacity: 1; /* Fully visible when not hidden */
 }
 
+
+
 .ulmobile li a {
   color: white; /* Ensure links are white */
   font-size: 1.25rem; /* Adjust font size for better readability */

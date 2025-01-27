@@ -68,36 +68,36 @@
         <div id="contactDropdown" class="hidden contactdrp absolute left-0 w-full py-4 top-[4.6rem] rounded-b-md animate-dropdown text-black">
           <div class="container flex items-center justify-center mx-auto">
             <ul class="dropper flex justify-evenly flex-col gap-1 py-4 text-lg bg-white pl-6 pr-4">
-              <li class="py-1 px-4 cursor-pointer flex relative justify-start items-center hover:bg-blue-600 hover:text-white">
+              <li class="py-1 px-4 cursor-pointer flex relative justify-start items-center hover:bg-[#001896] hover:text-white">
                 <a href="#" class="w-full">TC Wire Drawing Dies</a>
               </li>
-              <li class="py-1 px-4 hover:bg-blue-600 hover:text-white">
+              <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
                 <a href="#" class="w-full">T.C. Shaped Bar Draw Dies</a>
               </li>
-              <li class="py-1 px-4 hover:bg-blue-600 hover:text-white">
+              <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
                 <a href="#" class="w-full">Polycrystalline Diamond Dies</a>
               </li>
-              <li class="py-1 px-4 hover:bg-blue-600 hover:text-white">
+              <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
                 <a href="#" class="w-full">Compex Diamond Dies</a>
               </li>
-              <li class="py-1 px-4 hover:bg-blue-600 hover:text-white">
+              <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
                 <a href="#" class="w-full">T.C. Wear Parts</a>
               </li>
-              <li class="py-1 px-4 hover:bg-blue-600 hover:text-white">
+              <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
                 <a href="#" class="w-full">T.C Welding Electrodes Bushes</a>
               </li>
-              <li class="py-1 px-4 hover:bg-blue-600 hover:text-white">
+              <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
                 <a href="#" class="w-full">T.C Hex Drawing Dies</a>
               </li>
-              <li class="py-1 px-4 hover:bg-blue-600 hover:text-white">
+              <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
                 <a href="#" class="w-full">T.C Valve Forging Dies</a>
               </li>
-              <li class="py-1 px-4 hover:bg-blue-600 hover:text-white">
+              <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
                 <a href="#" class="w-full">Electric Torque Wrencher</a>
               </li>
               <!-- View All Products Link -->
               <li class="py-2 px-4 mt-2 text-center border-t border-gray-200">
-                <a href="Products.html" class="text-blue-600 hover:text-blue-800">
+                <a href="Products.html" class="text-[#001896] hover:text-blue-800">
                   View All Products <i class="fas fa-arrow-right ml-2"></i>
                 </a>
               </li>
@@ -107,7 +107,7 @@
       </nav>
 
       <!-- for mobile  -->
-      <nav class="box flex md:hidden justify-between px-4 py-2">
+      <nav class="box flex md:hidden justify-between px-4 py-2 ">
         <a href="index.html"><div class="text-xl w-40 font-bold text-[#fff]">
           <img src="assets/1.png" alt="" /></div>
         </a>
@@ -117,19 +117,18 @@
         </button>
       </nav>
 
-      <div id="mobileMenu" class="hidden h-screen w-80vw flex flex-col space-y-2 pt-12 items-center text-lg z-50 bg-opacity-90 px-6 ">
-        <ul class="space-y-12 ulmobile ">
-          <li><a href="index.html" class="text-white ">Home</a></li>
-          <li class="relative"><a href="about.html" class="text-white cursor-pointer" onclick="toggleDropdown()">About</a></li>
-          <!-- <li><a href="blogs.html" class="text-white">Blogs</a></li> -->
-          <li><a href="gallery.html" class="text-white">Gallery</a></li>
-          <li><a href="Products.html" class="text-white" onclick="toggleDropdown()">Products</a></li>
-          <li><a href="contact.html" class="text-white">Contact</a></li>
+      <div id="mobileMenu" class="hidden h-full flex flex-col space-y-2 pt-12 items-center text-lg z-50 bg-opacity-90 px-6 ">
+        <ul class="space-y-8 ulmobile ">
+          <li class="text-center"><a href="index.html" class="text-white ">Home</a></li>
+          <li class="text-center"><a href="about.html" class="text-white">About</a></li>
+          <li class="text-center"><a href="gallery.html" class="text-white">Gallery</a></li>
+          <li class="text-center"><a href="Products.html" class="text-white">Products</a></li>
+          <li class="text-center"><a href="contact.html" class="text-white">Contact</a></li>
         </ul>
 
         <!-- Search Input -->
         <a href="" class="getBrochureLink">
-          <button type="button" class=" mt-4 border brochar rounded px-6 py-1 border-blue-800 focus:outline-none text-white focus:ring focus:ring-blue-900 hover:bg-[#0112a9] ease-in">
+          <button type="button" class=" mt-4 mb-12 border brochar rounded px-6 py-1 border-blue-800 focus:outline-none text-white focus:ring focus:ring-blue-900 hover:bg-[#0112a9] ease-in">
             Get Brochure
           </button>
         </a>
@@ -141,7 +140,7 @@
       <div id="formModal" class="fixed inset-0 flex justify-center items-center bg-gray-500 bg-opacity-50 z-50 hidden">
         <div class="bg-white p-6 rounded-lg relative w-96">
             <!-- Close Button -->
-            <span id="closeModal" class="absolute top-2 left-2 cursor-pointer text-xl font-bold text-red-600">&times;</span>
+            <span id="closeModal" class="absolute top-2 right-2 cursor-pointer text-xl font-bold text-red-600">&times;</span>
       
             <h2 class="text-xl font-semibold mb-4">Fill out the form to get the brochure</h2>
       
@@ -162,7 +161,7 @@
                     <input type="tel" id="phone" name="phone" required class="w-full px-4 py-2 border rounded-lg" />
                 </div>
       
-                <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg">Submit</button>
+                <button type="submit" class="w-full bg-[#001896] text-white py-2 rounded-lg">Submit</button>
             </form>
         </div>
       </div>
@@ -613,20 +612,20 @@
       <!-- Footer -->
       <footer class="relative py-16 px-6 lg:px-40 bg-[#000053] text-white">
         <!-- Background Image Layer -->
-        <div class="absolute inset-0 bg-[url('assets/img/wire1.jpeg')] bg-cover bg-center opacity-5"></div>
-          <div class="container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <div class="absolute inset-0 bg-[url('assets/img/wire1.jpeg')] bg-cover bg-center opacity-5 "></div>
+          <div class="container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8 ">
               <!-- Logo and Contact -->
-              <div>
+              <div class="z-10">
                   <!-- Logo -->
                   <a href="index.html"><img src="assets/logo.avif" alt=" Logo" class="w-48 mb-2"></a>
                   <p class="mb-1">                        
                       <strong>Khurana Wire Drawing Dies <br>Private Limited</strong>                        
                   </p>                    
-                  <div class="flex space-x-4 text-lg">
-                      <a href="#" class="hover:text-gray-500 mt-2"><img src="assets/icons/linkedin.png" class="w-6 " alt="Linkedin"></a>
-                      <a href="#" class="hover:text-gray-500 mt-2"><img src="assets/icons/facebook.png" class="w-6 " alt="Facebook"></a>
-                      <a href="#" class="hover:text-gray-500 mt-2"><img src="assets/icons/instagram.png" class="w-6 " alt="Linkedin"></a>
-                      <a href="#" class="hover:text-gray-500 mt-2"><img src="assets/icons/youtube.png" class="w-6 " alt="Linkedin"></a>
+                  <div class="flex space-x-4 text-lg ">
+                      <a href="#" class="hover:text-gray-500 mt-2 z-10"><img src="assets/icons/linkedin.png" class="w-6 " alt="Linkedin"></a>
+                      <a href="#" class="hover:text-gray-500 mt-2 z-10"><img src="assets/icons/facebook.png" class="w-6 " alt="Facebook"></a>
+                      <a href="#" class="hover:text-gray-500 mt-2 z-10"><img src="assets/icons/instagram.png" class="w-6 " alt="Linkedin"></a>
+                      <a href="#" class="hover:text-gray-500 mt-2 z-10"><img src="assets/icons/youtube.png" class="w-6 " alt="Linkedin"></a>
                   </div>
               </div>
 
@@ -635,19 +634,19 @@
                   <h4 class="text-white text-lg font-semibold mb-4">Useful Links</h4>
                   <ul>
                       <li class="flex items-center mb-1">                        
-                          <a href="index.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>Home</a>
+                          <a href="index.html" class="hover:text-gray-500 mb-1 z-10"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>Home</a>
                       </li>
                       <li class="flex items-center mb-1">                        
-                          <a href="about.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>About Us</a>
+                          <a href="about.html" class="hover:text-gray-500 mb-1 z-10"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>About Us</a>
                       </li>
                       <li class="flex items-center mb-1">                        
-                          <a href="Products.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>Products</a>
+                          <a href="Products.html" class="hover:text-gray-500 mb-1 z-10"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>Products</a>
                       </li>
                       <li class="flex items-center mb-1">                        
-                          <a href="" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>Terms of Services</a>
+                          <a href="" class="hover:text-gray-500 mb-1 z-10"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>Terms of Services</a>
                       </li>
                       <li class="flex items-center mb-1">                        
-                          <a href="#" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>Privacy Policy</a>
+                          <a href="#" class="hover:text-gray-500 mb-1 z-10"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>Privacy Policy</a>
                       </li>
                   </ul>
               </div>
@@ -657,19 +656,19 @@
                   <h4 class="text-white text-lg font-semibold mb-4">Products</h4>
                   <ul>
                       <li class="flex items-center mb-1">                        
-                          <a href="Products.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>Product 1</a>
+                          <a href="Products.html" class="hover:text-gray-500 mb-1 z-10"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>Product 1</a>
                       </li>
                       <li class="flex items-center mb-1">                        
-                          <a href="Products.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>Product 2</a>
+                          <a href="Products.html" class="hover:text-gray-500 mb-1 z-10"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>Product 2</a>
                       </li>
                       <li class="flex items-center mb-1">                        
-                          <a href="Products.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>Product 3</a>
+                          <a href="Products.html" class="hover:text-gray-500 mb-1 z-10"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>Product 3</a>
                       </li>
                       <li class="flex items-center mb-1">                        
-                        <a href="Products.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>Product 4</a>
+                        <a href="Products.html" class="hover:text-gray-500 mb-1 z-10"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>Product 4</a>
                     </li>
                     <li class="flex items-center mb-1">                        
-                      <a href="Products.html" class="hover:text-gray-500 mb-1"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>Product 5</a>
+                      <a href="Products.html" class="hover:text-gray-500 mb-1 z-10"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>Product 5</a>
                   </li>
                   </ul>
               </div>
@@ -679,13 +678,13 @@
                   <h4 class="text-white text-lg font-semibold mb-4">Contact info</h4>
                   <ul>
                       <li class="flex items-center mb-4">                        
-                          <img src="assets/icons/location.png" alt="location" class="w-6 mr-4"></img>Punjani Industrial Estate, Khopat Rd, Hans Nagar, Thane West, Thane, Maharashtra 400601, India</a>
+                          <img src="assets/icons/location.png" alt="location" class="w-6 mr-4"></img><a href="" class=" z-10">Punjani Industrial Estate, Khopat Rd, Hans Nagar, Thane West, Thane, Maharashtra 400601, India</a>
                       </li>
                       <li class="flex items-center mb-4">                        
-                          <img src="assets/icons/phone.png" alt="Phone" class="w-6 mr-4">123-456-7890</a>
+                          <img src="assets/icons/phone.png" alt="Phone" class="w-6 mr-4"><a href="" class=" z-10">123-456-7890</a>
                       </li>   
                       <li class="flex items-center mb-4">                        
-                          <img src="assets/icons/mail.png" alt="Mail" class="w-6 mr-4">info@khuranawiredie.com</a>
+                          <img src="assets/icons/mail.png" alt="Mail" class="w-6 mr-4"><a href="" class=" z-10">info@khuranawiredie.com</a>
                       </li>                       
                   </ul>
               </div>
