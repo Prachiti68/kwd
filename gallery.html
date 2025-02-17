@@ -10,6 +10,55 @@
     <link rel="stylesheet" href="animation.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <style>
+      .image-hover {
+          position: relative;
+          overflow: hidden;
+      }
+
+      .image-hover img {
+          transition: transform 0.5s ease, filter 0.5s ease;
+      }
+
+      .image-hover:hover img {
+          transform: scale(1.1);
+          filter: brightness(0.8);
+      }
+
+      .image-hover::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.3);
+          opacity: 0;
+          transition: opacity 0.5s ease;
+          z-index: 1;
+      }
+
+      .image-hover:hover::before {
+          opacity: 1;
+      }
+
+      .image-hover .card-content {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          padding: 1rem;
+          background: hwb(230 0% 41%);
+          color: white;
+          transform: translateY(100%);
+          transition: transform 0.5s ease;
+          z-index: 2;
+      }
+
+      .image-hover:hover .card-content {
+          transform: translateY(0);
+      }
+  </style>
   </head>
  
   <body class="bg-[#f7fef9] overflow-x-hidden">
@@ -193,9 +242,39 @@
       </section>
       <!--About Hero Section Ends -->
 
-      <!-- Contact Section -->
-      <section class="max-w-5xl mx-auto my-16  bg-white shadow-lg rounded-lg relative px-4 md:px-0">
+      <!-- gallery section -->
+      <section class="py-10">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-[#001892] mb-8">Gallery</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="rounded-2xl shadow-lg image-hover">
+                    <img src="image1.jpg" alt="Description 1" class="w-full h-48 object-cover">
+                    <div class="card-content">
+                        <p class="text-center font-medium">Description 1</p>
+                    </div>
+                </div>
+                <div class="rounded-2xl shadow-lg image-hover">
+                    <img src="image2.jpg" alt="Description 2" class="w-full h-48 object-cover">
+                    <div class="card-content">
+                        <p class="text-center font-medium">Description 2</p>
+                    </div>
+                </div>
+                <div class="rounded-2xl shadow-lg image-hover">
+                    <img src="image3.jpg" alt="Description 3" class="w-full h-48 object-cover">
+                    <div class="card-content">
+                        <p class="text-center font-medium">Description 3</p>
+                    </div>
+                </div>
+                <div class="rounded-2xl shadow-lg image-hover">
+                    <img src="image4.jpg" alt="Description 4" class="w-full h-48 object-cover">
+                    <div class="card-content">
+                        <p class="text-center font-medium">Description 4</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+    <!-- gallery section ends-->
 
       <!-- Footer -->
       <footer class="relative py-16 px-6 lg:px-40 bg-[#000053] text-white">
