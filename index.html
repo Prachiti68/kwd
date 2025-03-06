@@ -16,6 +16,61 @@
   <!-- Include Swiper and Fancybox Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+  <!-- Custom CSS for Animations & Arrows -->
+<style>
+  /* Smooth fade-in animation */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-in-out forwards;
+  }
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Custom Swiper Navigation Buttons */
+  .swiper-button-prev, .swiper-button-next {
+    background-color: rgba(0, 0, 83, 0.8);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .swiper-button-prev:hover, .swiper-button-next:hover {
+    transform: scale(1.15);
+    background-color: #000053;
+  }
+  
+  .swiper-button-prev::after, .swiper-button-next::after {
+    font-size: 18px;
+    color: white;
+  }
+  
+  /* Pagination Dots */
+  .swiper-pagination-bullet {
+    background: white;
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+  </style>
 </head>
  
 <body class="bg-[#f7fef9] overflow-x-hidden">
@@ -85,34 +140,34 @@
               <a href="tungstencarbidewiredrawingdie.html" class="w-full">Tungsten Carbide Wire Drawing Die</a>
             </li>
             <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
-              <a href="#" class="w-full">Tungsten Carbide Bar Drawing Die</a>
+              <a href="tcbardrawingdie.html" class="w-full">Tungsten Carbide Bar Drawing Die</a>
             </li>
             <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
-              <a href="#" class="w-full">PCD Wire Die (Polycrystalline)</a>
+              <a href="pcdwiredie.html" class="w-full">PCD Wire Die (Polycrystalline)</a>
             </li>
             <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
-              <a href="#" class="w-full">Compex Diamond Die</a>
+              <a href="compexdiamonddie.html" class="w-full">Compex Diamond Die</a>
             </li>
             <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
-              <a href="#" class="w-full">T.C. Shaped Bar Die</a>
+              <a href="tcshapedbardie.html" class="w-full">T.C. Shaped Bar Die</a>
             </li>
             <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
-              <a href="#" class="w-full">T.C. Special Profile Shape Die</a>
+              <a href="tcspecialprofileshapedie.html" class="w-full">T.C. Special Profile Shape Die</a>
             </li>
             <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
-              <a href="#" class="w-full">T.C Valve Forging Die</a>
+              <a href="tcvalveforgingdie.html" class="w-full">T.C Valve Forging Die</a>
             </li>
             <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
-              <a href="#" class="w-full">T.C. Dies For Concrete Nail</a>
+              <a href="tcdiesforconcretenail.html" class="w-full">T.C. Dies For Concrete Nail</a>
             </li>
             <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
-              <a href="#" class="w-full">T.C. Compacting Dies</a>
+              <a href="tccompactingdies.html" class="w-full">T.C. Compacting Dies</a>
             </li>
             <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
-              <a href="#" class="w-full">Die Reworking Machines & Consumables</a>
+              <a href="diereworkingmachines.html" class="w-full">Die Reworking Machines & Consumables</a>
             </li>
             <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
-              <a href="#" class="w-full">I.D Measuring Gauge Set</a>
+              <a href="idmeasuringgaugeset.html" class="w-full">I.D Measuring Gauge Set</a>
             </li>
             <!-- View All Products Link -->
             <li class="py-2 px-4 mt-2 text-center border-t border-gray-200">
@@ -568,7 +623,7 @@
     <!-- Explore products section ends -->
 
     <!-- Certificates Section Start -->
-    <div class="bg-gray-100 text-[#000053] py-16 px-6 md:px-12" data-aos="fade-up">
+    <div class="bg-gray-100 text-[#000053] py-16 px-6 md:px-12 overflow-x-hidden" data-aos="fade-up">
       <div class="max-w-6xl mx-auto text-center">
         <h2 class="text-4xl md:text-5xl font-medium leading-tight ">
           Our Commitment to Quality
@@ -612,7 +667,169 @@
     </div>
     <!-- Certificates Section End -->
 
-    <!-- Contact Section -->
+    <!-- Our Clientele Section -->
+    <section class="py-16 bg-white overflow-x-hidden">
+      <div class="container mx-auto px-4 md:px-40">
+          <h2 class="text-4xl sm:text-5xl font-medium text-[#120E37] leading-tight transition-colors text-center mb-8 ">Trusted By Partners</h2>
+          <hr class="border-[#FF9800] w-40 mb-12 mx-auto">
+          <div class="relative overflow-hidden">
+              <!-- Logo Slider Container -->
+              <div id="logoSlider" class="flex space-x-12">
+                  <!-- Logo Group 1 -->
+                  <div class="flex-shrink-0 flex space-x-12 items-center">
+                      <img src="assets/img/benzene_client_logos/aditya.png" alt="Client Logo" class="h-12 w-auto transition-all duration-300">
+                      <img src="assets/img/benzene_client_logos/anamika.png" alt="Client Logo" class="h-12 w-auto transition-all duration-300">
+                      <img src="assets/img/benzene_client_logos/bcshetty.png" alt="Client Logo" class="h-12 w-auto transition-all duration-300">
+                      <img src="assets/img/benzene_client_logos/BSBA.png" alt="Client Logo" class="h-12 w-auto transition-all duration-300">
+                      <img src="assets/img/benzene_client_logos/fixologo.png" alt="Client Logo" class="h-12 w-auto transition-all duration-300">
+                      <img src="assets/img/benzene_client_logos/gatewayhr.png" alt="Client Logo" class="h-12 w-auto transition-all duration-300">
+                  </div>
+                  <!-- Logo Group 2 (Duplicate for seamless loop) -->
+                  <div class="flex-shrink-0 flex space-x-12 items-center">
+                      <img src="assets/img/benzene_client_logos/global_vision_academy.png" alt="Client Logo" class="h-12 w-auto transition-all duration-300">
+                      <img src="assets/img/benzene_client_logos/happyevents.png" alt="Client Logo" class="h-12 w-auto transition-all duration-300">
+                      <img src="assets/img/benzene_client_logos/infinity_academy.png" alt="Client Logo" class="h-12 w-auto transition-all duration-300">
+                      <img src="assets/img/benzene_client_logos/jobskafe.png" alt="Client Logo" class="h-12 w-auto transition-all duration-300">
+                      <img src="assets/img/benzene_client_logos/kii.png" alt="Client Logo" class="h-12 w-auto transition-all duration-300">
+                      <img src="assets/img/benzene_client_logos/kireeti_group.png" alt="Client Logo" class="h-12 w-auto transition-all duration-300">
+                  </div>
+                  <!-- Logo Group 3 (Duplicate for seamless loop) -->
+                  <div class="flex-shrink-0 flex space-x-12 items-center">
+                      <img src="assets/img/benzene_client_logos/krishnam_creations.png" alt="Client Logo" class="h-12 w-auto transition-all duration-300">
+                      <img src="assets/img/benzene_client_logos/media_exhibitors.png" alt="Client Logo" class="h-12 w-auto transition-all duration-300">
+                      <img src="assets/img/benzene_client_logos/MYRIAD.png" alt="Client Logo" class="h-12 w-auto transition-all duration-300">
+                      <img src="assets/img/benzene_client_logos/sahu.png" alt="Client Logo" class="h-12 w-auto transition-all duration-300">
+                      <img src="assets/img/benzene_client_logos/shreeincorporation-lg-@2x.png" alt="Client Logo" class="h-12 w-auto transition-all duration-300">
+                      <img src="assets/img/benzene_client_logos/tripjack.png" alt="Client Logo" class="h-12 w-auto transition-all duration-300">
+                  </div>
+              </div>            
+            </div>
+        </div>
+    </section>
+    <!-- clientele section ends -->
+
+    <!-- Banners starts-->
+    <section class="container mx-auto px-4 md:px-40 py-8 md:py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+          <!-- banner 1 -->
+          <div class="relative h-[200px] md:h-[300px] rounded-2xl overflow-hidden group">
+              <img src="assets/img/banner1.png" alt="Special Collection" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-[#000035] bg-opacity-70 bg-blur-sm flex flex-col items-start justify-center p-6 md:p-10 transition-all duration-300">
+                  <h2 class="text-2xl md:text-4xl mb-2 md:mb-4 text-gray-200 font-semibold">Customized Solutions</h2>
+                  <p class="text-sm md:text-base text-gray-200 mb-4 md:mb-6 max-w-xs">Tailored to meet the specific needs of your machinery.</p>
+                  <a href="products.html"><button class="bg-white text-[#000053] px-6 md:px-8 py-2 md:py-3 rounded-full hover:bg-[##000053] transition-all duration-300 transform hover:scale-105 text-sm md:text-base">
+                      Explore Our Products
+                  </button></a>
+              </div>
+          </div>
+
+          <!-- Banner 2 -->
+          <div class="relative h-[200px] md:h-[300px] rounded-2xl overflow-hidden group">
+              <img src="assets/img/banner2.webp" alt="Sale" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-[#000035] bg-opacity-70 bg-blur-sm flex flex-col items-start justify-center p-6 md:p-10 transition-all duration-300">
+                  <h2 class="text-2xl md:text-4xl mb-2 md:mb-4 text-gray-200 font-semibold">Precision Engineering</h2>
+                  <p class="text-sm md:text-base text-gray-200 mb-4 md:mb-6 max-w-xs">Tailored solutions for your industry. </p>
+                  <a href="#"><button class="bg-white text-[#000053] px-6 md:px-8 py-2 md:py-3 rounded-full hover:bg-[##000053] transition-all duration-300 transform hover:scale-105 text-sm md:text-base">
+                      Request a Quote
+                  </button></a>
+              </div>
+          </div>
+      </div>
+    </section>
+    <!-- banner ends -->
+
+    <!-- Testimonials section starts -->
+    <div class="bg-[#f3fff6] py-16">
+      <div class="max-w-7xl mx-auto px-6 md:px-16 text-center">
+        <!-- Section Heading -->
+        <h2 class="text-4xl sm:text-5xl font-medium text-[#000053] pb-4">What Our Clients Say</h2>
+        <hr class="border-[#cd5634] w-32 sm:w-40 mx-auto mb-6">
+    
+        <!-- Swiper Container -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            
+            <!-- Testimonial 1 -->
+            <div class="swiper-slide bg-white rounded-lg shadow-md p-6 sm:p-8 text-center transition-transform transform hover:scale-105">
+              <img src="assets/img/g.jpeg" alt="Client Image" class="mx-auto w-16 h-16 rounded-full shadow-lg mb-4">
+              <p class="text-sm sm:text-base text-gray-700">"KWD provides exceptional quality and precision in wire drawing dies. Our production efficiency has improved significantly!"</p>
+              <div class="mt-4 flex justify-center">
+                <span class="text-[#cd5634] text-xl">★★★★★</span>
+              </div>
+              <h4 class="mt-2 font-semibold text-[#000053]">John Smith</h4>
+              <p class="text-xs text-gray-500">CEO, MetalWorks Ltd.</p>
+            </div>
+    
+            <!-- Testimonial 2 -->
+            <div class="swiper-slide bg-white rounded-lg shadow-md p-6 sm:p-8 text-center transition-transform transform hover:scale-105">
+              <img src="assets/img/p.png" alt="Client Image" class="mx-auto w-16 h-16 rounded-full shadow-lg mb-4">
+              <p class="text-sm sm:text-base text-gray-700">"Reliable, durable, and custom-made dies that match our exact needs. KWD is our trusted partner!"</p>
+              <div class="mt-4 flex justify-center">
+                <span class="text-[#cd5634] text-xl">★★★★★</span>
+              </div>
+              <h4 class="mt-2 font-semibold text-[#000053]">Sarah Johnson</h4>
+              <p class="text-xs text-gray-500">Operations Manager, WireTech Inc.</p>
+            </div>
+    
+            <!-- Testimonial 3 -->
+            <div class="swiper-slide bg-white rounded-lg shadow-md p-6 sm:p-8 text-center transition-transform transform hover:scale-105">
+              <img src="assets/img/a.png" alt="Client Image" class="mx-auto w-16 h-16 rounded-full shadow-lg mb-4">
+              <p class="text-sm sm:text-base text-gray-700">"Their attention to detail and customer service are top-notch. We highly recommend KWD!"</p>
+              <div class="mt-4 flex justify-center">
+                <span class="text-[#cd5634] text-xl">★★★★★</span>
+              </div>
+              <h4 class="mt-2 font-semibold text-[#000053]">Michael Brown</h4>
+              <p class="text-xs text-gray-500">Procurement Head, Industrial Metals</p>
+            </div>
+    
+            <!-- Testimonial 4 -->
+            <div class="swiper-slide bg-white rounded-lg shadow-md p-6 sm:p-8 text-center transition-transform transform hover:scale-105">
+              <img src="assets/img/m.png" alt="Client Image" class="mx-auto w-16 h-16 rounded-full shadow-lg mb-4">
+              <p class="text-sm sm:text-base text-gray-700">"Top-quality products with fast delivery. KWD has exceeded our expectations every time!"</p>
+              <div class="mt-4 flex justify-center">
+                <span class="text-[#cd5634] text-xl">★★★★★</span>
+              </div>
+              <h4 class="mt-2 font-semibold text-[#000053]">Emma Wilson</h4>
+              <p class="text-xs text-gray-500">Head of Manufacturing, SteelWorks Ltd.</p>
+            </div>
+    
+            <!-- Testimonial 5 -->
+            <div class="swiper-slide bg-white rounded-lg shadow-md p-6 sm:p-8 text-center transition-transform transform hover:scale-105">
+              <img src="assets/img/g.jpeg" alt="Client Image" class="mx-auto w-16 h-16 rounded-full shadow-lg mb-4">
+              <p class="text-sm sm:text-base text-gray-700">"We’ve been using KWD products for years, and they always maintain superior durability and performance!"</p>
+              <div class="mt-4 flex justify-center">
+                <span class="text-[#cd5634] text-xl">★★★★★</span>
+              </div>
+              <h4 class="mt-2 font-semibold text-[#000053]">David Martinez</h4>
+              <p class="text-xs text-gray-500">Senior Engineer, TechSteel Inc.</p>
+            </div>
+    
+            <!-- Testimonial 6 -->
+            <div class="swiper-slide bg-white rounded-lg shadow-md p-6 sm:p-8 text-center transition-transform transform hover:scale-105">
+              <img src="assets/img/a.png" alt="Client Image" class="mx-auto w-16 h-16 rounded-full shadow-lg mb-4">
+              <p class="text-sm sm:text-base text-gray-700">"KWD’s expertise in manufacturing wire drawing dies is unmatched. Their products ensure flawless operations!"</p>
+              <div class="mt-4 flex justify-center">
+                <span class="text-[#cd5634] text-xl">★★★★★</span>
+              </div>
+              <h4 class="mt-2 font-semibold text-[#000053]">Sophia Patel</h4>
+              <p class="text-xs text-gray-500">Product Manager, IndustrialTech.</p>
+            </div>
+            
+          </div>
+        </div>
+    
+        <!-- Swiper Navigation -->
+        <div class="flex justify-center gap-6 mt-6">
+          <button class="prev-button text-[#000053] text-2xl font-bold hover:text-[#cd5634]">❮</button>
+          <button class="next-button text-[#000053] text-2xl font-bold hover:text-[#cd5634]">❯</button>
+        </div>
+      </div>
+    </div>
+    <!-- Testimonials ends -->
+
+    
+
+    <!-- Contact Section starts-->
     <section class="max-w-5xl mx-auto my-16  bg-white shadow-lg rounded-lg relative px-4 md:px-0">
       <div class="flex flex-col md:flex-row">
       <!-- Left Side: Contact Information (1/3 Width) -->
@@ -644,50 +861,50 @@
               <div class="w-28 h-28 bg-gray-500 rounded-full opacity-60 absolute -bottom-5 -left-4"></div>
           </div>
           </div>
-      </div>
-      
+        </div>
+        
 
-      <!-- Right Side: Contact Form (2/3 Width) -->
-      <div class="p-8 md:w-2/3 text-[#000053] pt-12 ">
-          <form action="#" method="POST" class="space-y-6">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 ">
-              <div>
-              <label for="first-name" class="block ">Your Name</label>
-              <input type="text" id="first-name" name="first-name" class="w-full border-b border-gray-300 focus:border-gray-500 outline-none p-1" placeholder="John Doe">
-              </div>
-              <div>
-              <label for="last-name" class="block ">Company Name</label>
-              <input type="text" id="last-name" name="last-name" class="w-full border-b border-gray-300 focus:border-gray-500 outline-none p-1" placeholder="eg: ABC Company">
-              </div>
-          </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div>
-              <label for="email" class="block ">Your Email</label>
-              <input type="email" id="email" name="email" class="w-full border-b border-gray-300 focus:border-gray-500 outline-none p-1" placeholder="you@example.com">
-              </div>
-              <div>
-              <label for="phone" class="block">Phone Number</label>
-              <input type="tel" id="phone" name="phone" class="w-full border-b border-gray-300 focus:border-gray-500 outline-none p-1" placeholder="+1 012 3456 789">
-              </div>
-          </div>
-          <div>
-              <label for="country" class="block ">Country</label>
-              <input type="text" id="country" name="country" class="w-full border-b border-gray-300 focus:border-gray-500 outline-none p-1" placeholder="Country">
-          </div>
-          <div>
-              <label for="message" class="block ">Message</label>
-              <textarea id="message" name="message" class="w-full border-b border-gray-300 focus:border-gray-500 outline-none p-1" rows="4" placeholder="Write your message.."></textarea>
-          </div>
-          <button type="submit" class="w-full sm:w-auto px-6 py-3 border border-[#000053] text-[#000053] font-semibold rounded-full hover:bg-[#000053] hover:text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50">
-              Send Message
-          </button>
-          </form>
+        <!-- Right Side: Contact Form (2/3 Width) -->
+        <div class="p-8 md:w-2/3 text-[#000053] pt-12 ">
+            <form action="#" method="POST" class="space-y-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 ">
+                <div>
+                <label for="first-name" class="block ">Your Name</label>
+                <input type="text" id="first-name" name="first-name" class="w-full border-b border-gray-300 focus:border-gray-500 outline-none p-1" placeholder="John Doe">
+                </div>
+                <div>
+                <label for="last-name" class="block ">Company Name</label>
+                <input type="text" id="last-name" name="last-name" class="w-full border-b border-gray-300 focus:border-gray-500 outline-none p-1" placeholder="eg: ABC Company">
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                <label for="email" class="block ">Your Email</label>
+                <input type="email" id="email" name="email" class="w-full border-b border-gray-300 focus:border-gray-500 outline-none p-1" placeholder="you@example.com">
+                </div>
+                <div>
+                <label for="phone" class="block">Phone Number</label>
+                <input type="tel" id="phone" name="phone" class="w-full border-b border-gray-300 focus:border-gray-500 outline-none p-1" placeholder="+1 012 3456 789">
+                </div>
+            </div>
+            <div>
+                <label for="country" class="block ">Country</label>
+                <input type="text" id="country" name="country" class="w-full border-b border-gray-300 focus:border-gray-500 outline-none p-1" placeholder="Country">
+            </div>
+            <div>
+                <label for="message" class="block ">Message</label>
+                <textarea id="message" name="message" class="w-full border-b border-gray-300 focus:border-gray-500 outline-none p-1" rows="4" placeholder="Write your message.."></textarea>
+            </div>
+            <button type="submit" class="w-full sm:w-auto px-6 py-3 border border-[#000053] text-[#000053] font-semibold rounded-full hover:bg-[#000053] hover:text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50">
+                Send Message
+            </button>
+            </form>
+        </div>
       </div>
-      </div>
-  </section>
+    </section>
+    <!-- Contact Section ends-->
 
     <!-- Footer -->
-    
     <footer class="relative bg-[#000035] text-white py-8 px-6 ">
       <!-- Background Image Layer -->
       <div class="absolute inset-0 bg-[url('assets/img/wire1.jpeg')] bg-cover bg-center opacity-5 z-0"></div>
@@ -818,61 +1035,20 @@ var swiper = new Swiper(".heroSwiper", {
 });
 </script>
 
-<!-- Custom CSS for Animations & Arrows -->
-<style>
-/* Smooth fade-in animation */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1s ease-in-out forwards;
-}
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-/* Custom Swiper Navigation Buttons */
-.swiper-button-prev, .swiper-button-next {
-  background-color: rgba(0, 0, 83, 0.8);
-  color: white;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-.swiper-button-prev:hover, .swiper-button-next:hover {
-  transform: scale(1.15);
-  background-color: #000053;
-}
-
-.swiper-button-prev::after, .swiper-button-next::after {
-  font-size: 18px;
-  color: white;
-}
-
-/* Pagination Dots */
-.swiper-pagination-bullet {
-  background: white;
-  opacity: 0.5;
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-.swiper-pagination-bullet-active {
-  opacity: 1;
-  transform: scale(1.3);
-}
-</style>
+<!-- Swiper Initialization -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    navigation: { nextEl: ".next-button", prevEl: ".prev-button" },
+    breakpoints: {
+      640: { slidesPerView: 1, spaceBetween: 20 },
+      768: { slidesPerView: 2, spaceBetween: 30 },
+      1024: { slidesPerView: 3, spaceBetween: 40 }
+    }
+  });
+</script>
 
 
 </body>

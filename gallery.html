@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="animation.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <style>
+    <!-- Fancybox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+    <!-- <style>
       .image-hover {
           position: relative;
           overflow: hidden;
@@ -58,7 +60,7 @@
       .image-hover:hover .card-content {
           transform: translateY(0);
       }
-  </style>
+  </style> -->
   </head>
  
   <body class="bg-[#f7fef9] overflow-x-hidden">
@@ -122,34 +124,34 @@
                 <a href="tungstencarbidewiredrawingdie.html" class="w-full">Tungsten Carbide Wire Drawing Die</a>
               </li>
               <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
-                <a href="#" class="w-full">Tungsten Carbide Bar Drawing Die</a>
+                <a href="tcbardrawingdie.html" class="w-full">Tungsten Carbide Bar Drawing Die</a>
               </li>
               <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
-                <a href="#" class="w-full">PCD Wire Die (Polycrystalline)</a>
+                <a href="pcdwiredie.html" class="w-full">PCD Wire Die (Polycrystalline)</a>
               </li>
               <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
-                <a href="#" class="w-full">Compex Diamond Die</a>
+                <a href="compexdiamonddie.html" class="w-full">Compex Diamond Die</a>
               </li>
               <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
-                <a href="#" class="w-full">T.C. Shaped Bar Die</a>
+                <a href="tcshapedbardie.html" class="w-full">T.C. Shaped Bar Die</a>
               </li>
               <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
-                <a href="#" class="w-full">T.C. Special Profile Shape Die</a>
+                <a href="tcspecialprofileshapedie.html" class="w-full">T.C. Special Profile Shape Die</a>
               </li>
               <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
-                <a href="#" class="w-full">T.C Valve Forging Die</a>
+                <a href="tcvalveforgingdie.html" class="w-full">T.C Valve Forging Die</a>
               </li>
               <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
-                <a href="#" class="w-full">T.C. Dies For Concrete Nail</a>
+                <a href="tcdiesforconcretenail.html" class="w-full">T.C. Dies For Concrete Nail</a>
               </li>
               <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
-                <a href="#" class="w-full">T.C. Compacting Dies</a>
+                <a href="tccompactingdies.html" class="w-full">T.C. Compacting Dies</a>
               </li>
               <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
-                <a href="#" class="w-full">Die Reworking Machines & Consumables</a>
+                <a href="diereworkingmachines.html" class="w-full">Die Reworking Machines & Consumables</a>
               </li>
               <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
-                <a href="#" class="w-full">I.D Measuring Gauge Set</a>
+                <a href="idmeasuringgaugeset.html" class="w-full">I.D Measuring Gauge Set</a>
               </li>
               <!-- View All Products Link -->
               <li class="py-2 px-4 mt-2 text-center border-t border-gray-200">
@@ -249,9 +251,8 @@
       <!--About Hero Section Ends -->
 
       <!-- gallery section -->
-      <section class="py-10">
+      <!-- <section class="py-10">
         <div class="max-w-7xl mx-auto px-4">
-            <!-- <h2 class="text-3xl md:text-4xl font-bold text-center text-[#001892] mb-8">Gallery</h2> -->
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 <div class="rounded-2xl shadow-lg image-hover">
                     <img src="image1.jpg" alt="Description 1" class="w-full h-48 object-cover">
@@ -279,8 +280,56 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- gallery section ends-->
+
+     <!-- Gallery Section -->
+     <div class="max-w-7xl mx-auto px-6 py-12">
+      <!-- <h2 class="text-3xl font-bold text-center mb-8">Our Gallery</h2> -->
+
+      <!-- Filter Buttons -->
+      <div class="flex flex-wrap justify-center space-x-4 mb-6">
+          <button class="filter-btn active-filter bg-gradient-to-r from-[#C4188C] to-[#532D86] text-white px-4 py-2 rounded-full hover:bg-gradient-to-l " data-filter="all">All</button>
+          <button class="filter-btn bg-gradient-to-r from-[#C4188C] to-[#532D86] text-white px-4 py-2 rounded-full hover:bg-gradient-to-l" data-filter="nature">Awards</button>
+          <button class="filter-btn bg-gradient-to-r from-[#C4188C] to-[#532D86] text-white px-4 py-2 rounded-full hover:bg-gradient-to-l" data-filter="architecture">Products</button>
+          <button class="filter-btn bg-gradient-to-r from-[#C4188C] to-[#532D86] text-white px-4 py-2 rounded-full hover:bg-gradient-to-l" data-filter="people">Team</button>
+      </div>
+
+      <!-- Image Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div class="gallery-item nature">
+              <a href="assets/img/banner1.avif" data-fancybox="gallery">
+                  <img src="assets/img/banner1.avif" alt="" class="rounded-lg shadow-lg hover:scale-105 transition-transform cursor-pointer">
+              </a>
+          </div>
+          <div class="gallery-item architecture">
+              <a href="assets/img/2.avif" data-fancybox="gallery">
+                  <img src="assets/img/2.avif" alt="" class="rounded-lg shadow-lg hover:scale-105 transition-transform cursor-pointer">
+              </a>
+          </div>
+          <div class="gallery-item people">
+              <a href="assets/img/1.avif" data-fancybox="gallery">
+                  <img src="assets/img/1.avif" alt="" class="rounded-lg shadow-lg hover:scale-105 transition-transform cursor-pointer">
+              </a>
+          </div>
+          <div class="gallery-item nature">
+              <a href="assets/img/products/3.webp" data-fancybox="gallery">
+                  <img src="assets/img/products/3.webp" alt="" class="rounded-lg shadow-lg hover:scale-105 transition-transform cursor-pointer">
+              </a>
+          </div>
+          <div class="gallery-item architecture">
+              <a href="assets/img/14.png" data-fancybox="gallery">
+                  <img src="assets/img/14.png" alt="" class="rounded-lg shadow-lg hover:scale-105 transition-transform cursor-pointer">
+              </a>
+          </div>
+          <div class="gallery-item people">
+              <a href="assets/img/background2.jpg" data-fancybox="gallery">
+                  <img src="assets/img/background2.jpg" alt="" class="rounded-lg shadow-lg hover:scale-105 transition-transform cursor-pointer">
+              </a>
+          </div>
+      </div>
+  </div>
+    <!-- Gallery section ends -->
 
       <!-- Footer -->
       
@@ -391,6 +440,35 @@
     <!--End of Tawk.to Script-->
 
     <script src="script.js"></script>
+    <!-- Fancybox & JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+    
+    <script>
+        // Initialize Fancybox
+        Fancybox.bind("[data-fancybox='gallery']", {
+            Thumbs: { autoStart: true },
+            Toolbar: {
+                display: ["zoom", "thumbs", "close"]
+            }
+        });
+
+        // Filter Functionality
+        document.querySelectorAll(".filter-btn").forEach(button => {
+            button.addEventListener("click", () => {
+                document.querySelectorAll(".filter-btn").forEach(btn => btn.classList.remove("bg-blue-600", "active-filter"));
+                button.classList.add("bg-blue-600", "active-filter");
+
+                const filter = button.getAttribute("data-filter");
+                document.querySelectorAll(".gallery-item").forEach(item => {
+                    if (filter === "all" || item.classList.contains(filter)) {
+                        item.classList.remove("hidden");
+                    } else {
+                        item.classList.add("hidden");
+                    }
+                });
+            });
+        });
+    </script>
 
   </body>
 </html>
