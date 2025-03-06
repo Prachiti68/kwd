@@ -1,59 +1,54 @@
-// dropdown menu ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-// Select the dropdown trigger and dropdown menu
-const productsMenu = document.getElementById('contact');
-const productsDropdown = document.getElementById('contactDropdown');
-
-if (productsMenu && productsDropdown) {
-    // Show dropdown on mouseenter
-    productsMenu.addEventListener('mouseenter', function () {
-        productsDropdown.classList.remove('hidden');
+  //header script--------------------------------------------------------------------------------
+  document.addEventListener("DOMContentLoaded", function () {
+    // Active page highlighting
+    const currentPage = window.location.pathname.split("/").pop();
+    document.querySelectorAll("nav a").forEach((link) => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("font-bold");
+      }
     });
-
-    // Keep dropdown open when hovering over the dropdown itself
-    productsDropdown.addEventListener('mouseenter', function () {
-        productsDropdown.classList.remove('hidden');
+  
+    // Dropdown functionality
+    const productMenu = document.getElementById("contact");
+    const dropdown = document.getElementById("contactDropdown");
+  
+    productMenu.addEventListener("mouseenter", () => {
+      dropdown.classList.remove("hidden");
     });
-
-    // Hide dropdown when leaving the dropdown area
-    productsDropdown.addEventListener('mouseleave', function () {
-        productsDropdown.classList.add('hidden');
+  
+    productMenu.addEventListener("mouseleave", () => {
+      dropdown.classList.add("hidden");
     });
-
-    // Hide dropdown when leaving the menu item
-    productsMenu.addEventListener('mouseleave', function () {
-        productsDropdown.classList.add('hidden');
+  
+    dropdown.addEventListener("mouseenter", () => {
+      dropdown.classList.remove("hidden");
     });
-}
-
-//hAMBURGER MENU --------------------------------------------------------------------------
-// Select the hamburger menu button and mobile menu elements
-const mobileMenuButton = document.getElementById('mobileMenuButton');
-const mobileMenu = document.getElementById('mobileMenu');
-
-// Add an event listener to the hamburger menu button
-mobileMenuButton.addEventListener('click', () => {
-  // Toggle the 'hidden' class on the mobile menu
-  mobileMenu.classList.toggle('hidden');
-
-  // Add a smooth transition for better UX
-  if (!mobileMenu.classList.contains('hidden')) {
-    mobileMenu.style.transition = 'all 0.3s ease-in-out';
-    mobileMenu.style.opacity = '1';
-  } else {
-    mobileMenu.style.opacity = '0';
-  }
-});
-
-// Optional: Close the menu when clicking outside of it
-document.addEventListener('click', (event) => {
-  if (
-    !mobileMenu.contains(event.target) && // If the click is not inside the menu
-    !mobileMenuButton.contains(event.target) // And not on the hamburger button
-  ) {
-    mobileMenu.classList.add('hidden'); // Hide the menu
-  }
-});
-
+  
+    dropdown.addEventListener("mouseleave", () => {
+      dropdown.classList.add("hidden");
+    });
+  
+    // Close dropdown when clicking anywhere outside the dropdown's width
+    document.addEventListener("click", (event) => {
+      const dropdownRect = dropdown.getBoundingClientRect();
+      if (
+        !productMenu.contains(event.target) &&
+        !dropdown.contains(event.target) &&
+        (event.clientX < dropdownRect.left || event.clientX > dropdownRect.right || event.clientY < dropdownRect.top || event.clientY > dropdownRect.bottom)
+      ) {
+        dropdown.classList.add("hidden");
+      }
+    });
+  
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById("mobileMenuButton");
+    const mobileMenu = document.getElementById("mobileMenu");
+  
+    mobileMenuButton.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  });
+  
 // back to top button ------------------------------------------------------------------------
 var mybutton = document.getElementById("scrollToTopBtn");
 
@@ -118,7 +113,7 @@ if (formSubmission) {
     });
 }
 
-// products carousel functionality -------------------------------------------------------------
+// products carousel functionality ----------------------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", function () {
     const track = document.getElementById("carouselTrack");
     const prevBtn = document.getElementById("prevBtn");
@@ -227,51 +222,16 @@ document.addEventListener("DOMContentLoaded", function () {
     moveToSlide(currentIndex);
   });
 
-// Hero section carousel functionality ----------------------------------------------------------
-const heroTrack = document.getElementById('heroCarouselTrack');
-const heroSlides = Array.from(heroTrack.children);
-const heroNextBtn = document.getElementById('heroNextBtn');
-const heroPrevBtn = document.getElementById('heroPrevBtn');
-const heroDots = document.querySelectorAll('.hero-dot');
 
-let heroCurrentIndex = 0;
-
-function updateHeroSlide() {
-    heroTrack.style.transform = `translateX(-${heroCurrentIndex * 100}%)`;
-    heroDots.forEach(dot => dot.classList.remove('opacity-100'));
-    heroDots[heroCurrentIndex].classList.add('opacity-100');
-}
-
-heroNextBtn.addEventListener('click', () => {
-    heroCurrentIndex = (heroCurrentIndex + 1) % heroSlides.length;
-    updateHeroSlide();
-});
-
-heroPrevBtn.addEventListener('click', () => {
-    heroCurrentIndex = (heroCurrentIndex - 1 + heroSlides.length) % heroSlides.length;
-    updateHeroSlide();
-});
-
-heroDots.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-        heroCurrentIndex = index;
-        updateHeroSlide();
-    });
-});
-
-// Auto slide
-setInterval(() => {
-    heroNextBtn.click();
-}, 5000);
 
 // Initialize AOS -------------------------------------------------------------------
+
 AOS.init({
-    duration: 1000,  // Animation duration in milliseconds (default is 400)
-    easing: 'ease-in-out',  // Easing function for smoothness
-    delay: 300,  // Delay before the animation starts
-    once: true,  // Animation happens only once while scrolling
-    mirror: false  // Whether elements should animate when scrolling past them again
-  });
+  offset: 20, // Start animation at 5% of viewport
+  duration: 1000, // Animation duration in milliseconds
+  once: false, // Ensures animations happen only once
+  easing: 'ease-in-out',
+});
 
 // Counter animation logic ------------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", function () {
@@ -314,24 +274,118 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Clintele scroll --------------------------------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', function() {
-    const slider = document.getElementById('logoSlider');
-    const firstGroup = slider.children[0];
-    let position = 0;
-    const speed = 1; // Adjust speed as needed
-    
-    function animate() {
-        position -= speed;
-        
-        // When first group is fully scrolled, reset position
-        if (-position >= firstGroup.offsetWidth) {
-            position = 0;
-        }
-        
-        // Apply transform with hardware acceleration
-        slider.style.transform = `translate3d(${position}px, 0, 0)`;
-        requestAnimationFrame(animate);
-    }
-    
-    // Start animation
-    animate();
+  const slider = document.getElementById('logoSlider');
+  const firstGroup = slider.children[0];
+  let position = 0;
+  const speed = 1; // Adjust speed as needed
+  
+  function animate() {
+      position -= speed;
+      
+      // When first group is fully scrolled, reset position
+      if (-position >= firstGroup.offsetWidth) {
+          position = 0;
+      }
+      
+      // Apply transform with hardware acceleration
+      slider.style.transform = `translate3d(${position}px, 0, 0)`;
+      requestAnimationFrame(animate);
+  }
+  
+  // Start animation
+  animate();
+});
+
+
+// Hero section carousel functionality ----------------------------------------------------------
+// document.addEventListener("DOMContentLoaded", function () {
+//   const track = document.getElementById("heroCarouselTrack");
+//   const slides = track.children;
+//   const prevBtn = document.getElementById("heroPrevBtn");
+//   const nextBtn = document.getElementById("heroNextBtn");
+//   const dots = document.querySelectorAll(".hero-dot");
+//   let currentIndex = 0;
+//   let interval;
+  
+//   const updateSlidePosition = () => {
+//     track.style.transform = `translateX(-${currentIndex * 100}%)`;
+//     dots.forEach((dot, index) => {
+//       dot.style.opacity = index === currentIndex ? "1" : "0.5";
+//     });
+//   };
+
+//   const nextSlide = () => {
+//     currentIndex = (currentIndex + 1) % slides.length;
+//     updateSlidePosition();
+//   };
+
+//   const prevSlide = () => {
+//     currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+//     updateSlidePosition();
+//   };
+
+//   const goToSlide = (index) => {
+//     currentIndex = index;
+//     updateSlidePosition();
+//   };
+
+//   const startAutoSlide = () => {
+//     interval = setInterval(nextSlide, 5000);
+//   };
+
+//   const stopAutoSlide = () => {
+//     clearInterval(interval);
+//   };
+
+//   nextBtn.addEventListener("click", () => {
+//     stopAutoSlide();
+//     nextSlide();
+//     startAutoSlide();
+//   });
+
+//   prevBtn.addEventListener("click", () => {
+//     stopAutoSlide();
+//     prevSlide();
+//     startAutoSlide();
+//   });
+
+//   dots.forEach((dot, index) => {
+//     dot.addEventListener("click", () => {
+//       stopAutoSlide();
+//       goToSlide(index);
+//       startAutoSlide();
+//     });
+//   });
+
+//   updateSlidePosition();
+//   startAutoSlide();
+// });
+
+
+//product pages scroller 
+document.addEventListener("DOMContentLoaded", function() {
+  const scroller = document.getElementById('scroller');
+  if (scroller) {
+    let scrollSpeed = 2; // Adjust the speed as needed
+    scroller.innerHTML += scroller.innerHTML; // Duplicate content for seamless scrolling
+
+    // Use setInterval to move the scroller continuously
+    setInterval(() => {
+      scroller.scrollLeft += scrollSpeed;
+
+      // Reset the scroll position to create an infinite loop
+      if (scroller.scrollLeft >= scroller.scrollWidth / 2) {
+        scroller.scrollLeft = 0;
+      }
+    }, 20); 
+
+    // Optional: Pause scrolling on hover
+    scroller.addEventListener('mouseenter', () => {
+      scrollSpeed = 0;
+    });
+
+    scroller.addEventListener('mouseleave', () => {
+      scrollSpeed = 2; // Resume scrolling when the mouse leaves
+    });
+  } 
 });

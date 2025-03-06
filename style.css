@@ -156,4 +156,79 @@ body {
 .whatsapp-button:hover {
   background-color: #118509; /* Darker green for hover effect */
 }
-    
+    /* swiper product ---------------------------------------*/
+.swiper-button-next,
+  .swiper-button-prev{
+    color: #e42908 !important;  
+  }
+  
+  .swiper-pagination
+  .swiper-pagination-bullet {
+    background-color: #e42908 !important;
+  }
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#slider-track {
+  padding-left: 0; 
+  padding-right: 0; 
+}
+#imageModal {
+  display: none;
+}
+#imageModal.show {
+  display: flex;
+}
+
+
+/* <!-- Marquee Animation --> */
+
+  .marquee {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+  }
+  .marquee p {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 25s linear infinite;
+  }
+  @keyframes marquee {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+  }
+
+  /* Custom Navigation Buttons */
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #000053!important; 
+    width: 30px !important;
+    height: 30px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, background-color 0.3s ease !important;
+  }
+  /* Move the buttons outside */
+.swiper-button-prev {
+  left: -50px; /* Move left */
+}
+
+.swiper-button-next {
+  right: -50px; /* Move right */
+}
+
+  .swiper-button-prev:hover,
+  .swiper-button-next:hover {
+    transform: scale(1.15); /* Slight zoom on hover */
+  }
+
+  /* Adjust icon size */
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 30px !important; /* Smaller icons */
+  }

@@ -1,719 +1,879 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <link href="style.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  </head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link href="style.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <!-- Include Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Include Fancybox CSS for Image Popup -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+  <!-- Include Swiper and Fancybox Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+</head>
  
-  <body class="bg-[#f7fef9] overflow-x-hidden">
- 
-    <div class="wrapper  h-screen w-full">
-      <!-- Header start -->
-      <header id="head" class="fixed w-full top-0 backdrop-blur-lg bg-white text-[#000053] shadow-lg z-50 mx-auto ">
-      <nav class="hidden w-full container md:flex justify-between md:justify-evenly items-center px-4 relative z-50">
-        <!-- Logo -->
-        <a href="index.html">
-          <div class="w-40 logo font-bold text-[#fff]">
-            <img src="assets/1.png" class="h-auto w-full" alt=""/>
-          </div>
-        </a>
+<body class="bg-[#f7fef9] overflow-x-hidden">
+  <div class="wrapper  h-screen w-full">
 
-        <!-- Navbar Items -->
-        <ul class="flex justify-center items-center gap-4 text-lg z-50">
-          <!-- Home Link -->
-          <li><a href="index.html" class="itisactive hover:text-[#001896]">Home</a></li>
+    <!-- Header start -->
+    <header id="head" class="fixed  top-0 fixed  w-full backdrop-blur-lg bg-[#f2f6ff] text-[#000053] shadow-lg z-50 mx-auto ">
+      <!-- Pre-Header Start -->
+    <div class="top-0 w-full bg-gradient-to-l from-[#C4188C] to-[#410179] text-white font-bold text-sm py-2 h-10 flex items-center overflow-hidden relative ">
+      <div class="marquee whitespace-nowrap">
+        <p class="inline-block animate-marquee">
+          We are the Original KHURANAS.  &nbsp; • &nbsp;
+          WE HAVE NO BRANCH IN NAME OF KHURANA. &nbsp; • &nbsp;
+          We are the Original KHURANAS.&nbsp; • &nbsp; WE HAVE NO BRANCH IN NAME OF KHURANA.
+        </p>
+      </div>
+    </div>
+    <!-- Pre-Header End -->
 
-          <!-- About Link -->
-          <li id="about" class="relative py-6 cursor-pointer">
-            <a href="about.html" class=" hover:text-[#001896]">About</a>
-          </li>
-          <!-- blogs -->
-          <!-- <li class="relative py-6 cursor-pointer">
-            <a href="blogs.html" class=" hover:text-[#001896]">Blogs</a>
-          </li> -->
-
-          <!-- gallery  -->
-          <li class="relative py-6 cursor-pointer">
-            <a href="gallery.html" class=" hover:text-[#001896]">Gallery</a>
-          </li>
-
-          <!-- Products Link -->
-          <li id="contact" class="relative py-6 cursor-pointer">
-            <a href="Products.html" class=" hover:text-[#001896]">Products <i class="fa-solid fa-chevron-down"></i></a>
-          </li>
-          <!-- contact  -->
-          <li class="relative py-6 cursor-pointer">
-            <a href="contact.html" class=" hover:text-[#001896]">Contact</a>
-          </li>
-        </ul>
-
-        <!-- Search Input -->
-
-        <a href="" class="getBrochureLink">
-            <button
-                type="button"
-                class="border border-[#000053] w-40 text-blue-900 px-2 py-2 rounded-full flex items-center justify-center gap-1 group">
-                <p class="text-base transition-transform transform group-hover:-translate-x-2">Get Brochure</p>
-                <img src="assets/icons/download.png" alt="download" class="w-6 transition-transform transform group-hover:scale-125">
-            </button>
-        </a>
-        
-        <!-- Independent Dropdown for products -->
-        <div id="contactDropdown" class="hidden contactdrp absolute left-0 w-full py-4 top-[4.6rem] rounded-b-md animate-dropdown text-black">
-          <div class="container flex items-center justify-center mx-auto">
-            <ul class="dropper flex justify-evenly flex-col gap-1 py-4 text-lg bg-white pl-6 pr-4">
-              <li class="py-1 px-4 cursor-pointer flex relative justify-start items-center hover:bg-[#001896] hover:text-white">
-                <a href="#" class="w-full">TC Wire Drawing Dies</a>
-              </li>
-              <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
-                <a href="#" class="w-full">T.C. Shaped Bar Draw Dies</a>
-              </li>
-              <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
-                <a href="#" class="w-full">Polycrystalline Diamond Dies</a>
-              </li>
-              <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
-                <a href="#" class="w-full">Compex Diamond Dies</a>
-              </li>
-              <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
-                <a href="#" class="w-full">T.C. Wear Parts</a>
-              </li>
-              <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
-                <a href="#" class="w-full">T.C Welding Electrodes Bushes</a>
-              </li>
-              <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
-                <a href="#" class="w-full">T.C Hex Drawing Dies</a>
-              </li>
-              <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
-                <a href="#" class="w-full">T.C Valve Forging Dies</a>
-              </li>
-              <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
-                <a href="#" class="w-full">Electric Torque Wrencher</a>
-              </li>
-              <!-- View All Products Link -->
-              <li class="py-2 px-4 mt-2 text-center border-t border-gray-200">
-                <a href="Products.html" class="text-[#001896] hover:text-blue-800">
-                  View All Products <i class="fas fa-arrow-right ml-2"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
+    <nav class="hidden w-full container md:flex justify-between md:justify-evenly items-center px-4 relative z-50">
+      <!-- Logo -->
+      <a href="index.html">
+        <div class="w-40 logo font-bold text-[#fff]">
+          <img src="assets/img/logo.png" class="h-auto w-full p-1" alt=""/>
         </div>
-      </nav>
+      </a>
 
-      <!-- for mobile  -->
-      <nav class="box flex md:hidden justify-between px-4 py-2 ">
-        <a href="index.html"><div class="text-xl w-40 font-bold text-[#fff]">
-          <img src="assets/1.png" alt="" /></div>
-        </a>
+      <!-- Navbar Items -->
+      <ul class="flex justify-center items-center gap-6 text-lg z-50">
+        <!-- Home Link -->
+        <li><a href="index.html" class="itisactive hover:text-[#001896]">Home</a></li>
 
-        <button class="text-white" id="mobileMenuButton">
-          <i class="fa-solid fa-bars text-2xl" style="color: #001896"></i>
-        </button>
-      </nav>
+        <!-- About Link -->
+        <li id="about" class="relative py-6 cursor-pointer">
+          <a href="about.html" class=" hover:text-[#001896]">About</a>
+        </li>
+        <!-- gallery  -->
+        <li class="relative py-6 cursor-pointer">
+          <a href="gallery.html" class=" hover:text-[#001896]">Gallery</a>
+        </li>
 
-      <div id="mobileMenu" class="hidden h-full flex flex-col space-y-2 pt-12 items-center text-lg z-50 bg-opacity-90 px-6 ">
-        <ul class="space-y-8 ulmobile ">
-          <li class="text-center"><a href="index.html" class="text-white ">Home</a></li>
-          <li class="text-center"><a href="about.html" class="text-white">About</a></li>
-          <li class="text-center"><a href="gallery.html" class="text-white">Gallery</a></li>
-          <li class="text-center"><a href="Products.html" class="text-white">Products</a></li>
-          <li class="text-center"><a href="contact.html" class="text-white">Contact</a></li>
-        </ul>
+        <!-- Products Link -->
+        <li id="contact" class="relative py-6 cursor-pointer">
+          <a href="Products.html" class=" hover:text-[#001896]">Products <i class="fa-solid fa-chevron-down"></i></a>
+        </li>
+        <!-- contact  -->
+        <li class="relative py-6 cursor-pointer">
+          <a href="contact.html" class=" hover:text-[#001896]">Contact</a>
+        </li>
+      </ul>
 
-        <!-- Search Input -->
-        <a href="" class="getBrochureLink">
-          <button type="button" class=" mt-4 mb-12 border brochar rounded px-6 py-1 border-blue-800 focus:outline-none text-white focus:ring focus:ring-blue-900 hover:bg-[#0112a9] ease-in">
-            Get Brochure
+      <!-- Get Brochure -->
+      <a href="" class="getBrochureLink">
+          <button
+              type="button"
+              class="border border-[#000053] w-40 text-blue-900 px-2 py-2 rounded-full flex items-center justify-center gap-1 group">
+              <p class="text-base transition-transform transform group-hover:-translate-x-2">Get Brochure</p>
+              <img src="assets/icons/download.png" alt="download" class="w-6 transition-transform transform group-hover:scale-125">
           </button>
-        </a>
-      </div>
-      </header>
-      <!-- Header ends -->
-
-      <!-- brochure form  start-->
-      <div id="formModal" class="fixed inset-0 flex justify-center items-center bg-gray-500 bg-opacity-50 z-50 hidden">
-        <div class="bg-white p-6 rounded-lg relative w-96">
-            <!-- Close Button -->
-            <span id="closeModal" class="absolute top-2 right-2 cursor-pointer text-xl font-bold text-red-600">&times;</span>
+      </a>
       
-            <h2 class="text-xl font-semibold mb-4">Fill out the form to get the brochure</h2>
-      
-            <!-- Form -->
-            <form id="brochureForm">
-                <div class="mb-4">
-                    <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-                    <input type="text" id="name" name="name" required class="w-full px-4 py-2 border rounded-lg" />
-                </div>
-      
-                <div class="mb-4">
-                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                    <input type="email" id="email" name="email" required class="w-full px-4 py-2 border rounded-lg" />
-                </div>
-      
-                <div class="mb-4">
-                    <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" required class="w-full px-4 py-2 border rounded-lg" />
-                </div>
-      
-                <button type="submit" class="w-full bg-[#001896] text-white py-2 rounded-lg">Submit</button>
-            </form>
+      <!-- Independent Dropdown for products -->
+      <div id="contactDropdown" class="hidden contactdrp absolute left-0 w-full py-4 top-[4.6rem] rounded-b-md animate-dropdown text-black">
+        <div class="container flex items-center justify-center mx-auto">
+          <ul class="dropper flex justify-evenly flex-col gap-1 py-4 text-lg bg-white pl-6 pr-4">
+            <li class="py-1 px-4 cursor-pointer flex relative justify-start items-center hover:bg-[#001896] hover:text-white">
+              <a href="tungstencarbidewiredrawingdie.html" class="w-full">Tungsten Carbide Wire Drawing Die</a>
+            </li>
+            <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
+              <a href="#" class="w-full">Tungsten Carbide Bar Drawing Die</a>
+            </li>
+            <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
+              <a href="#" class="w-full">PCD Wire Die (Polycrystalline)</a>
+            </li>
+            <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
+              <a href="#" class="w-full">Compex Diamond Die</a>
+            </li>
+            <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
+              <a href="#" class="w-full">T.C. Shaped Bar Die</a>
+            </li>
+            <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
+              <a href="#" class="w-full">T.C. Special Profile Shape Die</a>
+            </li>
+            <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
+              <a href="#" class="w-full">T.C Valve Forging Die</a>
+            </li>
+            <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
+              <a href="#" class="w-full">T.C. Dies For Concrete Nail</a>
+            </li>
+            <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
+              <a href="#" class="w-full">T.C. Compacting Dies</a>
+            </li>
+            <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
+              <a href="#" class="w-full">Die Reworking Machines & Consumables</a>
+            </li>
+            <li class="py-1 px-4 hover:bg-[#001896] hover:text-white">
+              <a href="#" class="w-full">I.D Measuring Gauge Set</a>
+            </li>
+            <!-- View All Products Link -->
+            <li class="py-2 px-4 mt-2 text-center border-t border-gray-200">
+              <a href="Products.html" class="text-[#001896] hover:text-blue-800">
+                View All Products <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-      <!-- brochure form end-->
+    </nav>
 
-      <!-- Hero Section Starts -->
-      <section class="relative bg-gradient-to-l from-[#000053] to-[#000035] text-white mt-0 md:mt-12 overflow-hidden">
-        <!-- Background Image Layer -->
-        <div class="absolute inset-0 bg-[url('assets/img/background1.png')] bg-cover bg-center opacity-5"></div>
+    <!-- for mobile  -->
+    <nav class="box flex md:hidden justify-between px-4 py-1">
+      <a href="index.html"><div class="text-xl w-32 font-bold text-[#fff]">
+        <img src="assets/img/logo.png" alt="" /></div>
+      </a>
 
-        <div class="relative container mx-auto py-16 px-8 md:px-40">
-          <div class="relative overflow-hidden">
-            <div id="heroCarouselTrack" class="flex transition-transform duration-700 ease-in-out">
-              <!-- Slide 1 -->
-              <div class="w-full flex-shrink-0 flex flex-col-reverse md:flex-row items-center gap-8">
-                <div class="w-full md:w-1/2 text-center md:text-left">
-                  <h2 class="text-4xl md:text-6xl font-medium text-[#f7fef9] leading-tight pb-4">
-                    Welcome to Khurana Wire Drawing Dies
-                  </h2>
-                  <p class="text-lg max-w-3xl mx-auto leading-relaxed">
-                    We are a renowned manufacturer and exporter of high-quality Tungsten Carbide (TC) and Polycrystalline Diamond (PCD) dies.
-                  </p>
-                  <div class="mt-6 flex flex-col sm:flex-row sm:justify-start justify-center gap-4">
-                    <a href="#products" class="bg-[#cd5634] text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-[#b0482d] transition">
-                      Explore Products
-                    </a>
-                    <a href="#quote" class="border border-white text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-white hover:text-[#000053] transition">
-                      Get a Quote
-                    </a>
-                  </div>
-                </div>
-                <div class="w-full md:w-1/2 flex justify-center">
-                  <img src="assets/img/15.png" alt="Hero Image 1" class="w-full h-auto object-cover">
-                </div>
-              </div>
-              <!-- Slide 2 -->
-              <div class="w-full flex-shrink-0 flex flex-col-reverse md:flex-row items-center gap-8">
-                <div class="w-full md:w-1/2 text-center md:text-left">
-                  <h2 class="text-4xl md:text-6xl font-medium text-[#f7fef9] leading-tight pb-4">
-                    Precision in Every Wire
-                  </h2>
-                  <p class="text-lg max-w-3xl mx-auto leading-relaxed">
-                    We take pride in offering precision-engineered wire drawing dies that ensure superior performance.
-                  </p>
-                  <div class="mt-6 flex flex-col sm:flex-row sm:justify-start justify-center gap-4">
-                    <a href="#products" class="bg-[#cd5634] text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-[#b0482d] transition">
-                      Explore Products
-                    </a>
-                    <a href="#quote" class="border border-white text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-white hover:text-[#000053] transition">
-                      Get a Quote
-                    </a>
-                  </div>
-                </div>
-                <div class="w-full md:w-1/2 flex justify-center">
-                  <img src="assets/img/11.png" alt="Hero Image 2" class="w-full h-auto object-cover">
-                </div>
-              </div>
-              <!-- Slide 3 -->
-              <div class="w-full flex-shrink-0 flex flex-col-reverse md:flex-row items-center gap-8">
-                <div class="w-full md:w-1/2 text-center md:text-left">
-                  <h2 class="text-4xl md:text-6xl font-medium text-[#f7fef9] leading-tight pb-4">
-                    Global Quality Standards
-                  </h2>
-                  <p class="text-lg max-w-3xl mx-auto leading-relaxed">
-                    Our products meet international quality standards and are trusted by industries worldwide.
-                  </p>
-                  <div class="mt-6 flex flex-col sm:flex-row sm:justify-start justify-center gap-4">
-                    <a href="#products" class="bg-[#cd5634] text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-[#b0482d] transition">
-                      Explore Products
-                    </a>
-                    <a href="#quote" class="border border-white text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-white hover:text-[#000053] transition">
-                      Get a Quote
-                    </a>
-                  </div>
-                </div>
-                <div class="w-full md:w-1/2 flex justify-center">
-                  <img src="assets/img/10.png" alt="Hero Image 3" class="w-full h-auto object-cover">
-                </div>
-              </div>
-            </div>
+      <button class="text-white" id="mobileMenuButton">
+        <i class="fa-solid fa-bars text-2xl" style="color: #001896"></i>
+      </button>
+    </nav>
 
-          </div>
-        </div>
-        <!-- Pagination Dots -->
-        <div class="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
-          <div class="hero-dot w-4 h-4 bg-white rounded-full opacity-50 cursor-pointer"></div>
-          <div class="hero-dot w-4 h-4 bg-white rounded-full opacity-50 cursor-pointer"></div>
-          <div class="hero-dot w-4 h-4 bg-white rounded-full opacity-50 cursor-pointer"></div>
-        </div>
-        <!-- Navigation Arrows -->
-        <button id="heroPrevBtn" class="absolute top-1/2 left-0 md:left-10 transform -translate-y-1/2 text-white text-3xl">
-          &#10094;
+    <div id="mobileMenu" class="hidden h-full flex flex-col space-y-2 pt-12 items-center text-lg z-50 bg-opacity-90 px-6 ">
+      <ul class="space-y-8 ulmobile ">
+        <li class="text-center"><a href="index.html" class="text-white ">Home</a></li>
+        <li class="text-center"><a href="about.html" class="text-white">About</a></li>
+        <li class="text-center"><a href="gallery.html" class="text-white">Gallery</a></li>
+        <li class="text-center"><a href="Products.html" class="text-white">Products</a></li>
+        <li class="text-center"><a href="contact.html" class="text-white">Contact</a></li>
+      </ul>
+
+      <!-- Get Brochure -->
+      <a href="" class="getBrochureLink">
+        <button type="button" class=" mt-4 mb-12 border brochar rounded px-6 py-1 border-blue-800 focus:outline-none text-white focus:ring focus:ring-blue-900 hover:bg-[#0112a9] ease-in">
+          Get Brochure
         </button>
-        <button id="heroNextBtn" class="absolute top-1/2 right-0 md:right-10 transform -translate-y-1/2 text-white text-3xl">
-          &#10095;
-        </button>
-      </section>
-      <!-- Hero Section Ends -->
+      </a>
+    </div>
+    </header>
+    <!-- Header ends -->
 
-      <!-- Counter Section Start -->
-      <section class="max-w-6xl mx-auto py-20 px-8 md:px-20">
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 text-center">
-          <!-- Counter 1 -->
-          <div data-aos="fade-up" data-aos-delay="0" class="transition-transform transform hover:scale-105">
-            <h3 class="text-6xl font-medium text-[#000053]" data-counter="800">0+</h3>
-            <h3 class="text-xl text-[#000053] mt-2">Satisfied Clients</h3>
-            <p class="text-[#000053] mt-2">
-              Trusted by customers across diverse industries worldwide.
-            </p>
+    <!-- brochure form  start-->
+    <div id="formModal" class="fixed inset-0 flex justify-center items-center bg-gray-500 bg-opacity-50 z-50 hidden">
+      <div class="bg-white p-6 rounded-lg relative w-96">
+          <!-- Close Button -->
+          <span id="closeModal" class="absolute top-2 right-2 cursor-pointer text-xl font-bold text-blue-800">&times;</span>
+    
+          <h2 class="text-xl font-semibold mb-4">Fill out the form to get the brochure</h2>
+    
+          <!-- Form -->
+          <form id="brochureForm">
+              <div class="mb-4">
+                  <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                  <input type="text" id="name" name="name" required class="w-full px-4 py-2 border rounded-lg" />
+              </div>
+    
+              <div class="mb-4">
+                  <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                  <input type="email" id="email" name="email" required class="w-full px-4 py-2 border rounded-lg" />
+              </div>
+    
+              <div class="mb-4">
+                  <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" required class="w-full px-4 py-2 border rounded-lg" />
+              </div>
+    
+              <button type="submit" class="w-full bg-[#001896] text-white py-2 rounded-lg">Submit</button>
+          </form>
+      </div>
+    </div>
+    <!-- brochure form end-->
+
+    <!-- Hero Section Starts -->
+    <section class="relative bg-gradient-to-l from-[#000053] to-[#000035] text-white mt-0 md:mt-12 overflow-hidden">
+      <!-- Background Image Layer -->
+      <div class="absolute inset-0 bg-[url('assets/img/background1.png')] bg-cover bg-center opacity-10"></div>
+
+      <div class="relative container mx-auto py-16 px-8 md:px-40">
+        <!-- Swiper Container -->
+        <div class="swiper heroSwiper">
+          <div class="swiper-wrapper">
+            
+            <!-- Slide 1 -->
+            <div class="swiper-slide flex flex-col-reverse md:flex-row items-center gap-8 mt-20 ">
+              <div class="w-full md:w-1/2 text-center md:text-left fade-in">
+                <h2 class="text-4xl md:text-6xl font-medium text-[#f7fef9] leading-tight pb-4">
+                  Welcome to Khurana Wire Drawing Dies
+                </h2>
+                <p class="text-lg max-w-3xl mx-auto leading-relaxed">
+                  We are a renowned manufacturer and exporter of high-quality Tungsten Carbide (TC) and Polycrystalline Diamond (PCD) dies.
+                </p>
+                <div class="mt-6 flex flex-col sm:flex-row sm:justify-start justify-center gap-4">
+                  <a href="#products" class="bg-[#CD5634] text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-[#b0482d] transition">
+                    Explore Products
+                  </a>
+                  <a href="#quote" class="border border-white text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-white hover:text-[#000053] transition">
+                    Get a Quote
+                  </a>
+                </div>
+              </div>
+              <div class="w-full md:w-1/2 flex justify-center fade-in">
+                <img src="assets/img/4.png" alt="Hero Image 1" class="md:w-full w-[80%] h-auto object-cover">
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide flex flex-col-reverse md:flex-row items-center gap-8 mt-20">
+              <div class="w-full md:w-1/2 text-center md:text-left fade-in">
+                <h2 class="text-4xl md:text-6xl font-medium text-[#f7fef9] leading-tight pb-4">
+                  Precision in Every Wire
+                </h2>
+                <p class="text-lg max-w-3xl mx-auto leading-relaxed">
+                  We take pride in offering precision-engineered wire drawing dies that ensure superior performance.
+                </p>
+                <div class="mt-6 flex flex-col sm:flex-row sm:justify-start justify-center gap-4">
+                  <a href="#products" class="bg-[#CD5634] text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-[#b0482d] transition">
+                    Explore Products
+                  </a>
+                  <a href="#quote" class="border border-white text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-white hover:text-[#000053] transition">
+                    Get a Quote
+                  </a>
+                </div>
+              </div>
+              <div class="w-full md:w-1/2 flex justify-center fade-in">
+                <img src="assets/img/11.png" alt="Hero Image 2" class="md:w-full w-[80%] h-auto object-cover">
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide flex flex-col-reverse md:flex-row items-center gap-8 mt-20">
+              <div class="w-full md:w-1/2 text-center md:text-left fade-in">
+                <h2 class="text-4xl md:text-6xl font-medium text-[#f7fef9] leading-tight pb-4">
+                  Global Quality Standards
+                </h2>
+                <p class="text-md md:text-  max-w-3xl mx-auto leading-relaxed">
+                  Our products meet international quality standards and are trusted by industries worldwide.
+                </p>
+                <div class="mt-6 flex flex-col sm:flex-row sm:justify-start justify-center gap-4">
+                  <a href="#products" class="bg-[#CD5634] text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-[#b0482d] transition">
+                    Explore Products
+                  </a>
+                  <a href="#quote" class="border border-white text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-white hover:text-[#000053] transition">
+                    Get a Quote
+                  </a>
+                </div>
+              </div>
+              <div class="w-full md:w-1/2 flex justify-center fade-in">
+                <img src="assets/img/10.png" alt="Hero Image 3" class="md:w-full w-[80%] h-auto object-cover">
+              </div>
+            </div>
+
           </div>
-          <!-- Counter 2 -->
-          <div data-aos="fade-up" data-aos-delay="200" class="transition-transform transform hover:scale-105">
-            <h3 class="text-6xl font-medium text-[#000053]" data-counter="60">0+</h3>
-            <h3 class="text-xl text-[#000053] mt-2">Years Of Experience</h3>
-            <p class="text-[#000053] mt-2">
-              Delivering precision-engineered wire drawing solutions since 1965.
-            </p>
-          </div>
-          <!-- Counter 3 -->
-          <div data-aos="fade-up" data-aos-delay="400" class="transition-transform transform hover:scale-105">
-            <h3 class="text-6xl font-medium text-[#000053]" data-counter="100000">0+</h3>
-            <h3 class="text-xl text-[#000053] mt-2">Dies Manufactured</h3>
-            <p class="text-[#000053] mt-2">
-              Crafting durable and reliable dies for every wire drawing need.
-            </p>
+
+          <!-- Pagination Dots -->
+          <div class="swiper-pagination"></div>
+
+        </div>
+      </div>
+    </section>
+    <!-- Hero Section Ends -->
+
+    <!-- Counter Section Start -->
+    <section class="max-w-6xl mx-auto py-20 px-8 md:px-20">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 text-center">
+        <!-- Counter 1 -->
+        <div data-aos="fade-up" data-aos-delay="0" class="transition-transform transform hover:scale-105">
+          <h3 class="text-6xl font-medium bg-gradient-to-r from-[#C4188C] to-[#532D86] text-transparent bg-clip-text" >100%</h3>
+          <h3 class="text-xl text-[#000053] mt-2 font-bold">Quality Assurance</h3>
+          <!-- <p class="text-[#000053] mt-2">
+            Our products meet international quality standards.
+          </p> -->
+        </div>
+        <!-- Counter 2 -->
+        <div data-aos="fade-up" data-aos-delay="200" class="transition-transform transform hover:scale-105">
+          <h3 class="text-6xl font-medium bg-gradient-to-r from-[#C4188C] to-[#532D86] text-transparent bg-clip-text" data-counter="800">0+</h3>
+          <h3 class="text-xl text-[#000053] mt-2 font-bold">Satisfied Clients</h3>
+          <!-- <p class="text-[#000053] mt-2">
+            Trusted by customers across diverse industries worldwide.
+          </p> -->
+        </div>
+        <!-- Counter 2 -->
+        <div data-aos="fade-up" data-aos-delay="300" class="transition-transform transform hover:scale-105">
+          <h3 class="text-6xl font-medium bg-gradient-to-r from-[#C4188C] to-[#532D86] text-transparent bg-clip-text" data-counter="60">0+</h3>
+          <h3 class="text-xl text-[#000053] mt-2 font-bold">Years Of Experience</h3>
+          <!-- <p class="text-[#000053] mt-2">
+            Delivering precision-engineered wire drawing solutions since 1965.
+          </p> -->
+        </div>
+        <!-- Counter 4 -->
+        <div data-aos="fade-up" data-aos-delay="400" class="transition-transform transform hover:scale-105">
+          <h3 class="text-6xl font-medium bg-gradient-to-r from-[#C4188C] to-[#532D86] text-transparent bg-clip-text" data-counter="100000">0+</h3>
+          <h3 class="text-xl text-[#000053] mt-2 font-bold">Dies Manufactured</h3>
+          <!-- <p class="text-[#000053] mt-2">
+            Crafting durable and reliable dies for every wire drawing need.
+          </p> -->
+        </div>
+      </div>
+    </section>
+    <!-- Counter Section End -->
+
+
+    <!-- About Section Start -->
+    <div class="bg-[#f3fff6] text-[#000053] px-6 md:px-20 overflow-hidden">
+      <section class="max-w-7xl mx-auto py-16 flex flex-col md:flex-row items-center gap-12">
+        <!-- Images Section -->
+        <div class="relative w-full md:w-1/2 flex justify-center bg-gradient-to-l from-[#000053] to-[#532D86] rounded-md" data-aos="fade-right">
+          <div class="relative w-[300px] sm:w-[350px] md:w-[400px] h-[300px] sm:h-[350px] md:h-[400px]">
+            <img src="assets/img/1.avif" alt="Product Image" 
+              class="absolute rounded-lg -top-12 sm:-top-10 -right-12 sm:-right-10 z-10 w-3/4 shadow-lg transition-transform transform hover:scale-105">
+            <img src="assets/img/2.avif" alt="Product Image" 
+              class="absolute rounded-lg -bottom-12 sm:-bottom-10 -left-12 sm:-left-10 w-3/4 bg-[#f3bc88] transition-transform transform hover:scale-105">
           </div>
         </div>
-      </section>
-      <!-- Counter Section End -->
 
-      <!-- About Section Start -->
-      <div class="bg-[#f3fff6] text-[#000053] px-6 md:px-20 overflow-hidden">
-        <section class="max-w-7xl mx-auto py-16 flex flex-col md:flex-row items-center gap-12">
-          <!-- Images Section -->
-          <div class="relative w-full md:w-1/2 flex justify-center" data-aos="fade-right">
-            <div class="relative w-[300px] sm:w-[350px] md:w-[400px] h-[300px] sm:h-[350px] md:h-[400px]">
-              <img src="assets/img/2.avif" alt="Product Image" 
-                class="absolute rounded-lg -top-8 sm:-top-10 -right-8 sm:-right-10 z-10 w-3/4 shadow-lg transition-transform transform hover:scale-105">
-              <img src="assets/img/1.avif" alt="Product Image" 
-                class="absolute rounded-lg -bottom-8 sm:-bottom-10 -left-8 sm:-left-10 w-3/4 bg-[#f3bc88] transition-transform transform hover:scale-105">
-            </div>
-          </div>
-
-          <!-- Content Section -->
-          <div class="w-full md:w-1/2 p-6 sm:p-8" data-aos="fade-left">
-            <h2 class="text-4xl sm:text-5xl md:text-6xl font-medium text-[#000053] pb-4 mb-2 transition-colors hover:text-[#cd5634]">
-              About Us
-            </h2>
-            <hr class="border-[#cd5634] w-32 sm:w-40 mb-4">
-            <h3 class="text-xl sm:text-2xl font-medium text-[#000053] transition-colors hover:text-[#cd5634]">
-              Crafting Precision, Building Trust Since 1965
-            </h3>
-            <p class="mt-4 text-sm sm:text-base">
-              Khurana Wire Drawing Dies, established in 1965, is a renowned manufacturer and exporter of 
-              high-quality Tungsten Carbide (TC) and Polycrystalline Diamond (PCD) dies.
-            </p>
-            <p class="mt-2 text-sm sm:text-base">
-              With over five decades of experience, the company has built a reputation for delivering products 
-              known for their strength and durability, catering to various industries worldwide.
-            </p>
-
-            <!-- Icon Section -->
-            <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center" data-aos="fade-up">
-              <div class="transition-transform transform hover:scale-110">
-                <img src="assets/icons/expertise.png" alt="Decades of Expertise" class="mx-auto w-10 sm:w-12">
-                <p class="mt-2 text-xs sm:text-sm font-semibold">Decades Of<br>Expertise</p>
-              </div>
-              <div class="transition-transform transform hover:scale-110">
-                <img src="assets/icons/global-reach.png" alt="Global Reach" class="mx-auto w-10 sm:w-12">
-                <p class="mt-2 text-xs sm:text-sm font-semibold">Global<br>Reach</p>
-              </div>
-              <div class="transition-transform transform hover:scale-110">
-                <img src="assets/icons/quality.png" alt="Uncompromising Quality" class="mx-auto w-10 sm:w-12">
-                <p class="mt-2 text-xs sm:text-sm font-semibold">Uncompromising<br>Quality</p>
-              </div>
-              <div class="transition-transform transform hover:scale-110">
-                <img src="assets/icons/customizable.png" alt="Customized Solutions" class="mx-auto w-10 sm:w-12">
-                <p class="mt-2 text-xs sm:text-sm font-semibold">Customized<br>Solutions</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <!-- About Section End -->
-
-      <!-- Legacy Section Start -->
-      <div class="bg-white text-[#000053] overflow-hidden">
-        <section class="max-w-7xl mx-auto py-16 px-6 md:px-12 flex flex-col-reverse md:flex-row items-center gap-8">
-          <!-- Text Content -->
-          <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-right">
-            <h2 class="text-4xl sm:text-5xl font-medium text-[#000053] leading-tight transition-colors hover:text-[#cd5634]">
-              Legacy of <br>
-              Late Avsharan Singh <br>
-              Khurana
-            </h2>
-            <h3 class="text-lg sm:text-xl font-medium text-[#000053] mt-4 transition-colors hover:text-[#cd5634]">
-              A Visionary Leader, A Timeless Inspiration
-            </h3>
-            <hr class="border-[#cd5634] w-32 sm:w-40 my-4 mx-auto md:mx-0">
-            <p class="text-sm sm:text-base leading-relaxed">
-              Late Avsharan Singh Khurana laid the foundation of Khurana Wire Drawing Dies with a vision 
-              to deliver unmatched quality and innovation. His dedication and passion set the standard for 
-              excellence that drives us today.
-            </p>
-            <p class="mt-4 text-sm sm:text-base leading-relaxed">
-              A true pioneer, his commitment to precision and customer satisfaction earned the trust of clients worldwide. 
-              His principles of integrity and innovation remain at the heart of our company, inspiring us to continue his 
-              legacy of excellence and leadership in the wire drawing industry.
-            </p>
-          </div>
-
-          <!-- Image Section -->
-          <div class="w-full md:w-1/2 flex justify-center" data-aos="fade-left">
-            <img src="assets/img/director.png" alt="Late Avsharan Singh Khurana" 
-              class="w-full h-auto max-w-[300px] sm:max-w-[400px] md:max-w-[500px] transition-transform transform hover:scale-105">
-          </div>
-        </section>
-      </div>
-      <!-- Legacy Section End -->
-
-      <!-- Explore Our Products section starts-->
-      <section class="h-auto py-20 px-4 md:px-8 lg:px-16 text-center bg-[#000053] items-center overflow-hidden">
-        <h2 class="text-4xl sm:text-5xl md:text-6xl font-medium text-[#f7fef9] pb-4 mb-2 transition-colors hover:text-[#cd5634]">Explore Our Products</h2>
-        <hr class="border-[#cd5634] w-40 mb-12 mx-auto">
-
-        <div class="relative max-w-5xl mx-auto">
-          <!-- Previous Button -->
-          <button class="absolute left-[-20px] sm:left-[-30px] md:left-[-40px] top-40 -translate-y-1/2 z-20 shadow-lg" id="prevBtn">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>      
-
-          <!-- Carousel Container -->
-          <div class="overflow-hidden" id="carousel">
-            <div class="flex transition-transform duration-500 ease-in-out" id="carouselTrack">
-              <!-- Products -->
-              <div class="min-w-[80%] sm:min-w-[50%] md:min-w-[33.33%] lg:min-w-[25%] px-2">
-                <a href="#" class="block transform transition-transform duration-300 hover:scale-105">
-                  <div class="relative rounded-md overflow-hidden shadow-lg h-72">
-                    <img src="assets/img/products/tcwireproduct1.png" class="absolute inset-0 w-full h-full object-cover">
-                  </div>
-                  <div class="mt-4 text-left">
-                    <h5 class="font-medium text-xl mb-2 text-white">TC wire drawing dies</h5>
-                    <p class="text-sm text-gray-300  mb-2">High precision wire drawing solutions</p>
-                  </div>
-                </a>
-              </div>
-
-              <div class="min-w-[80%] sm:min-w-[50%] md:min-w-[33.33%] lg:min-w-[25%] px-2">
-                <a href="#" class="block transform transition-transform duration-300 hover:scale-105">
-                  <div class="relative rounded-md overflow-hidden shadow-lg h-72">
-                    <img src="assets/img/products/valeproduct4.png" class="absolute inset-0 w-full h-full object-cover">
-                  </div>
-                  <div class="mt-4 text-left">
-                    <h3 class="font-medium text-xl mb-2 text-white">T.C. shaped bar draw dies</h3>
-                    <p class="text-sm text-gray-300  mb-2">Custom shaped drawing solutions</p>
-                  </div>
-                </a>
-              </div>
-
-              <div class="min-w-[80%] sm:min-w-[50%] md:min-w-[33.33%] lg:min-w-[25%] px-2">
-                <a href="#" class="block transform transition-transform duration-300 hover:scale-105">
-                  <div class="relative rounded-md overflow-hidden shadow-lg h-72">
-                    <img src="assets/img/products/policrystalproduct2.png" class="absolute inset-0 w-full h-full object-cover">
-                  </div>
-                  <div class="mt-4 text-left">
-                    <h3 class="font-medium text-xl mb-2 text-white">Polycrystalline diamond dies</h3>
-                    <p class="text-sm text-gray-300  mb-2">Superior wear resistance</p>
-                  </div>
-                </a>
-              </div>
-
-              <div class="min-w-[80%] sm:min-w-[50%] md:min-w-[33.33%] lg:min-w-[25%] px-2">
-                <a href="#" class="block transform transition-transform duration-300 hover:scale-105">
-                  <div class="relative rounded-md overflow-hidden shadow-lg h-72">
-                    <img src="assets/img/products/complexdiamondproduct3.png" class="absolute inset-0 w-full h-full object-cover">
-                  </div>
-                  <div class="mt-4 text-left">
-                    <h3 class="font-medium text-xl mb-2 text-white">Compex Diamond dies</h3>
-                    <p class="text-sm text-gray-300  mb-2">Advanced diamond technology</p>
-                  </div>
-                </a>
-              </div>
-
-              <div class="min-w-[80%] sm:min-w-[50%] md:min-w-[33.33%] lg:min-w-[25%] px-2">
-                <a href="#" class="block transform transition-transform duration-300 hover:scale-105">
-                  <div class="relative rounded-md overflow-hidden shadow-lg h-72">
-                    <img src="assets/img/products/diesfastenereproduct5.png" class="absolute inset-0 w-full h-full object-cover">
-                  </div>
-                  <div class="mt-4 text-left">
-                    <h3 class="font-medium text-xl mb-2 text-white">T.C. wear parts</h3>
-                    <p class="text-sm text-gray-300  mb-2">Durable tungsten carbide components</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Next Button -->
-          <button class="absolute right-[-20px] sm:right-[-30px] md:right-[-40px] top-40 -translate-y-1/2 z-20 rounded-full shadow-lg" id="nextBtn">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-        </div>
-      </section>
-      <!-- Explore products section ends -->
-
-      <!-- Certificates Section Start -->
-      <div class="bg-gray-100 text-[#000053] py-16 px-6 md:px-12">
-        <div class="max-w-6xl mx-auto text-center">
-          <h2 class="text-4xl md:text-5xl font-medium leading-tight transition-colors hover:text-[#cd5634]">
-            Certificates & Accreditations
+        <!-- Content Section -->
+        <div class="w-full md:w-1/2 p-6 sm:p-8" data-aos="fade-left">
+          <h2 class="text-4xl sm:text-5xl md:text-6xl font-medium  pb-4 mb-2 ">
+            About Us
           </h2>
-          <hr class="border-[#cd5634] w-20 md:w-40 my-4 mx-auto">
-          <p class="text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
-            At Khurana Wire Drawing Dies, quality and reliability are at the core of everything we do. 
-            Our certifications are a testament to our unwavering dedication to meeting global standards 
-            and delivering the best to our clients.
+          <hr class="border-[#CD5634] w-32 sm:w-40 mb-4">
+          <h3 class="text-xl sm:text-2xl font-medium text-[#000053] transition-colors ">
+            Crafting Precision, Building Trust Since 1965
+          </h3>
+          <p class="mt-4 text-sm sm:text-base">
+            Khurana Wire Drawing Dies, established in 1965, is a renowned manufacturer and exporter of 
+            high-quality Tungsten Carbide (TC) and Polycrystalline Diamond (PCD) dies.
+          </p>
+          <p class="mt-2 text-sm sm:text-base">
+            With over five decades of experience, the company has built a reputation for delivering products 
+            known for their strength and durability, catering to various industries worldwide.
           </p>
 
-          <!-- Certification Cards -->
-          <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
-            <!-- ISO 9001 Certified -->
-            <div class="text-center">
-              <img 
-                src="assets/img/certificate1.avif" 
-                alt="ISO 9001:2015 Certified" 
-                class="mx-auto w-24 sm:w-28 md:w-32 rounded-full"
-              >
-              <h3 class="text-lg sm:text-xl font-semibold mt-4">
-                ISO 9001 : 2015 Certified
-              </h3>
-              <p class="mt-2 text-xs sm:text-sm max-w-xs mx-auto">
-                Ensuring consistent quality management and superior product performance.
-              </p>
+          <!-- Icon Section -->
+          <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center" data-aos="fade-up">
+            <div class="transition-transform transform hover:scale-110" data-aos="fade-up" data-aos-delay="400">
+              <img src="assets/icons/expertise.png" alt="Decades of Expertise" class="mx-auto w-10 sm:w-12">
+              <p class="mt-2 text-xs sm:text-sm font-semibold">Decades Of<br>Expertise</p>
             </div>
-
-            <!-- Trusted Supplier Certification -->
-            <div class="text-center">
-              <img 
-                src="assets/img/certificate2.avif" 
-                alt="Trusted Supplier Certifications" 
-                class="mx-auto w-24 sm:w-28 md:w-32 rounded-full"
-              >
-              <h3 class="text-lg sm:text-xl font-semibold mt-4">
-                Trusted Supplier Certifications
-              </h3>
-              <p class="mt-2 text-xs sm:text-sm max-w-xs mx-auto">
-                Acknowledged by leading industries for our dependable and high-quality solutions.
-              </p>
+            <div class="transition-transform transform hover:scale-110" data-aos="fade-up" data-aos-delay="600">
+              <img src="assets/icons/global-reach.png" alt="Global Reach" class="mx-auto w-10 sm:w-12">
+              <p class="mt-2 text-xs sm:text-sm font-semibold">Global<br>Reach</p>
             </div>
-
-            <!-- Global Client Approvals -->
-            <div class="text-center">
-              <img 
-                src="assets/img/certificate3.avif" 
-                alt="Global Client Approvals" 
-                class="mx-auto w-24 sm:w-28 md:w-32 rounded-full"
-              >
-              <h3 class="text-lg sm:text-xl font-semibold mt-4">
-                Global Client Approvals
-              </h3>
-              <p class="mt-2 text-xs sm:text-sm max-w-xs mx-auto">
-                Certified by numerous international clients, reflecting our commitment to excellence across borders.
-              </p>
+            <div class="transition-transform transform hover:scale-110" data-aos="fade-up" data-aos-delay="800">
+              <img src="assets/icons/quality.png" alt="Uncompromising Quality" class="mx-auto w-10 sm:w-12">
+              <p class="mt-2 text-xs sm:text-sm font-semibold">Uncompromising<br>Quality</p>
+            </div>
+            <div class="transition-transform transform hover:scale-110" data-aos="fade-up" data-aos-delay="1000">
+              <img src="assets/icons/customizable.png" alt="Customized Solutions" class="mx-auto w-10 sm:w-12">
+              <p class="mt-2 text-xs sm:text-sm font-semibold">Customized<br>Solutions</p>
             </div>
           </div>
         </div>
-      </div>
-      <!-- Certificates Section End -->
-
-      <!-- Contact Section -->
-        <section class="max-w-5xl mx-auto my-16  bg-white shadow-lg rounded-lg relative px-4 md:px-0">
-          <div class="flex flex-col md:flex-row">
-          <!-- Left Side: Contact Information (1/3 Width) -->
-          <div class="relative bg-[#000053] text-white p-8 rounded-t-lg md:rounded-l-lg md:rounded-tr-none md:w-1/3 flex flex-col justify-between overflow-hidden">
-              <div>
-              <h2 class="text-3xl font-bold mb-8">Contact Information</h2>
-              <div class="space-y-4">
-                  <div class="flex items-center">
-                  <i class="fas fa-phone mr-4"></i>
-                  <a href="tel:+911234567890" class="hover:text-gray-300">+91 1234567890</a>
-                  </div>
-                  <div class="flex items-center">
-                  <i class="fas fa-envelope mr-4"></i>
-                  <a href="mailto:info@kwd.com" class="hover:text-gray-300">info@kwd.com</a>
-                  </div>
-                  <div class="flex space-x-4">
-                    <a href="#" class="text-white text-xl sm:text-2xl"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="text-white text-xl sm:text-2xl"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" class="text-white text-xl sm:text-2xl"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="text-white text-xl sm:text-2xl"><i class="fab fa-youtube"></i></a>
-                </div>
-              </div>
-              </div>
-              
-              <!-- Large Decorative Circles -->
-              <div class="absolute -bottom-3 -right-32">
-              <div class="relative">
-                  <div class="w-60 h-60 bg-[#f3fff6] rounded-full opacity-90"></div>
-                  <div class="w-28 h-28 bg-gray-500 rounded-full opacity-60 absolute -bottom-5 -left-4"></div>
-              </div>
-              </div>
-          </div>
-          
-
-          <!-- Right Side: Contact Form (2/3 Width) -->
-          <div class="p-8 md:w-2/3 text-[#000053] pt-12 ">
-              <form action="#" method="POST" class="space-y-6">
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 ">
-                  <div>
-                  <label for="first-name" class="block ">Your Name</label>
-                  <input type="text" id="first-name" name="first-name" class="w-full border-b border-gray-300 focus:border-gray-500 outline-none p-1" placeholder="John Doe">
-                  </div>
-                  <div>
-                  <label for="last-name" class="block ">Company Name</label>
-                  <input type="text" id="last-name" name="last-name" class="w-full border-b border-gray-300 focus:border-gray-500 outline-none p-1" placeholder="eg: Fixomech">
-                  </div>
-              </div>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div>
-                  <label for="email" class="block ">Your Email</label>
-                  <input type="email" id="email" name="email" class="w-full border-b border-gray-300 focus:border-gray-500 outline-none p-1" placeholder="you@example.com">
-                  </div>
-                  <div>
-                  <label for="phone" class="block">Phone Number</label>
-                  <input type="tel" id="phone" name="phone" class="w-full border-b border-gray-300 focus:border-gray-500 outline-none p-1" placeholder="+1 012 3456 789">
-                  </div>
-              </div>
-              <div>
-                  <label for="country" class="block ">Country</label>
-                  <input type="text" id="country" name="country" class="w-full border-b border-gray-300 focus:border-gray-500 outline-none p-1" placeholder="Country">
-              </div>
-              <div>
-                  <label for="message" class="block ">Message</label>
-                  <textarea id="message" name="message" class="w-full border-b border-gray-300 focus:border-gray-500 outline-none p-1" rows="4" placeholder="Write your message.."></textarea>
-              </div>
-              <button type="submit" class="w-full sm:w-auto px-6 py-3 border border-[#000053] text-[#000053] font-semibold rounded-full hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50">
-                  Send Message
-              </button>
-              </form>
-          </div>
-          </div>
       </section>
-
-      <!-- Footer -->
-      <footer class="relative py-16 px-6 lg:px-40 bg-[#000053] text-white">
-        <!-- Background Image Layer -->
-        <div class="absolute inset-0 bg-[url('assets/img/wire1.jpeg')] bg-cover bg-center opacity-5 "></div>
-          <div class="container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8 ">
-              <!-- Logo and Contact -->
-              <div class="z-10">
-                  <!-- Logo -->
-                  <a href="index.html"><img src="assets/logo.avif" alt=" Logo" class="w-48 mb-2"></a>
-                  <p class="mb-1">                        
-                      <strong>Khurana Wire Drawing Dies <br>Private Limited</strong>                        
-                  </p>                    
-                  <div class="flex space-x-4 text-lg ">
-                      <a href="#" class="hover:text-gray-500 mt-2 z-10"><img src="assets/icons/linkedin.png" class="w-6 " alt="Linkedin"></a>
-                      <a href="#" class="hover:text-gray-500 mt-2 z-10"><img src="assets/icons/facebook.png" class="w-6 " alt="Facebook"></a>
-                      <a href="#" class="hover:text-gray-500 mt-2 z-10"><img src="assets/icons/instagram.png" class="w-6 " alt="Linkedin"></a>
-                      <a href="#" class="hover:text-gray-500 mt-2 z-10"><img src="assets/icons/youtube.png" class="w-6 " alt="Linkedin"></a>
-                  </div>
-              </div>
-
-              <!-- Useful Links -->
-              <div>
-                  <h4 class="text-white text-lg font-semibold mb-4">Useful Links</h4>
-                  <ul>
-                      <li class="flex items-center mb-1">                        
-                          <a href="index.html" class="hover:text-gray-500 mb-1 z-10"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>Home</a>
-                      </li>
-                      <li class="flex items-center mb-1">                        
-                          <a href="about.html" class="hover:text-gray-500 mb-1 z-10"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>About Us</a>
-                      </li>
-                      <li class="flex items-center mb-1">                        
-                          <a href="Products.html" class="hover:text-gray-500 mb-1 z-10"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>Products</a>
-                      </li>
-                      <li class="flex items-center mb-1">                        
-                          <a href="" class="hover:text-gray-500 mb-1 z-10"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>Terms of Services</a>
-                      </li>
-                      <li class="flex items-center mb-1">                        
-                          <a href="#" class="hover:text-gray-500 mb-1 z-10"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>Privacy Policy</a>
-                      </li>
-                  </ul>
-              </div>
-
-              <!-- Products -->
-              <div>
-                  <h4 class="text-white text-lg font-semibold mb-4">Products</h4>
-                  <ul>
-                      <li class="flex items-center mb-1">                        
-                          <a href="Products.html" class="hover:text-gray-500 mb-1 z-10"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>Product 1</a>
-                      </li>
-                      <li class="flex items-center mb-1">                        
-                          <a href="Products.html" class="hover:text-gray-500 mb-1 z-10"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>Product 2</a>
-                      </li>
-                      <li class="flex items-center mb-1">                        
-                          <a href="Products.html" class="hover:text-gray-500 mb-1 z-10"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>Product 3</a>
-                      </li>
-                      <li class="flex items-center mb-1">                        
-                        <a href="Products.html" class="hover:text-gray-500 mb-1 z-10"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>Product 4</a>
-                    </li>
-                    <li class="flex items-center mb-1">                        
-                      <a href="Products.html" class="hover:text-gray-500 mb-1 z-10"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>Product 5</a>
-                  </li>
-                  </ul>
-              </div>
-
-              <!-- Contact Info -->
-              <div>
-                  <h4 class="text-white text-lg font-semibold mb-4">Contact info</h4>
-                  <ul>
-                      <li class="flex items-center mb-4">                        
-                          <img src="assets/icons/location.png" alt="location" class="w-6 mr-4"></img><a href="" class=" z-10">Punjani Industrial Estate, Khopat Rd, Hans Nagar, Thane West, Thane, Maharashtra 400601, India</a>
-                      </li>
-                      <li class="flex items-center mb-4">                        
-                          <img src="assets/icons/phone.png" alt="Phone" class="w-6 mr-4"><a href="" class=" z-10">123-456-7890</a>
-                      </li>   
-                      <li class="flex items-center mb-4">                        
-                          <img src="assets/icons/mail.png" alt="Mail" class="w-6 mr-4"><a href="" class=" z-10">info@khuranawiredie.com</a>
-                      </li>                       
-                  </ul>
-              </div>
-          </div>
-
-          <!-- Bottom Section -->
-          <div class="mt-8 text-center text-gray-500 text-sm">
-              <p>Copyright kwd All Rights Reserved</p>
-              <p>Designed by <span class="text-[text-[#DC2626]]"><a href="https://www.benzenecorp.com">BenzeneCorp</a></span></p>
-          </div>
-      </footer>
-
-      <!-- Scroll to Top Button -->
-      <!-- <button id="scrollToTopBtn" class="scroll-to-top-btn  text-white text-4xl z-50">
-        <i class="fa-regular fa-circle-up"></i>
-      </button> -->
-
-
-      <!-- WhatsApp Button HTML -->
-      <!-- <a class="whatsapp-button" href="https://wa.me/9112000" target="_blank" title="Chat with us on WhatsApp"> 
-          <img src="assets/img/icon/whatsapp.png" alt="WhatsApp" class="whatsapp-icon"/>
-      </a> -->
-          
-
     </div>
+    <!-- About Section End -->
+
+    <!-- Legacy Section Start -->
+    <div class="bg-white text-[#000053] overflow-hidden">
+      <section class="max-w-7xl mx-auto py-16 px-6 md:px-12 flex flex-col-reverse md:flex-row items-center gap-8">
+        <!-- Text Content -->
+        <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-right">
+          <h2 class="text-4xl sm:text-5xl font-medium text-[#000053] leading-tight ">
+            Legacy of <br>
+            Late Avsharan Singh <br>
+            Khurana
+          </h2>
+          <h3 class="text-lg sm:text-xl font-medium text-[#000053] mt-4 ">
+            A Visionary Leader, A Timeless Inspiration
+          </h3>
+          <hr class="border-[#CD5634] w-32 sm:w-40 my-4 mx-auto md:mx-0">
+          <p class="text-sm sm:text-base leading-relaxed">
+            Late Avsharan Singh Khurana laid the foundation of Khurana Wire Drawing Dies with a vision 
+            to deliver unmatched quality and innovation. His dedication and passion set the standard for 
+            excellence that drives us today.
+          </p>
+          <p class="mt-4 text-sm sm:text-base leading-relaxed">
+            A true pioneer, his commitment to precision and customer satisfaction earned the trust of clients worldwide. 
+            His principles of integrity and innovation remain at the heart of our company, inspiring us to continue his 
+            legacy of excellence and leadership in the wire drawing industry.
+          </p>
+        </div>
+
+        <!-- Image Section -->
+        <div class="w-full md:w-1/2 flex justify-center" data-aos="fade-left">
+          <img src="assets/img/director.png" alt="Late Avsharan Singh Khurana" 
+            class="w-full h-auto max-w-[300px] sm:max-w-[400px] md:max-w-[600px] transition-transform transform hover:scale-105">
+        </div>
+      </section>
+    </div>
+    <!-- Legacy Section End -->
+
+    <!-- Explore Our Products section starts-->
+    <section class="h-auto py-20 px-4 md:px-8 lg:px-16 text-center bg-[#000053] items-center overflow-hidden">
+      <h2 class="text-4xl sm:text-5xl md:text-6xl font-medium text-[#f7fef9] pb-4 mb-2 ">Explore Our Products</h2>
+      <hr class="border-[#CD5634] w-40 mb-12 mx-auto">
+
+      <div class="relative max-w-7xl mx-auto">
+        <!-- Previous Button -->
+        <button class="absolute left-[-20px] sm:left-[-30px] md:left-[-40px] top-40 -translate-y-1/2 z-20 shadow-lg" id="prevBtn">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>      
+
+        <!-- Carousel Container -->
+        <div class="overflow-hidden" id="carousel">
+          <div class="flex transition-transform duration-500 ease-in-out " id="carouselTrack">
+            <!-- Products -->
+            <div class="min-w-[80%] sm:min-w-[50%] md:min-w-[33.33%] lg:min-w-[25%] px-2">
+              <a href="#" class="block transform transition-transform duration-300 hover:scale-105">
+                <div class="relative rounded-md overflow-hidden shadow-lg h-72">
+                  <img src="assets/img/products/tcwireproduct1.png" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+                <div class="mt-4 text-left">
+                  <h5 class="font-medium text-xl mb-2 text-white">Tungsten Carbide Wire Drawing Die</h5>
+                  <!-- <p class="text-sm text-gray-300  mb-2">High-durability dies for precision wire drawing applications.</p> -->
+                </div>
+              </a>
+            </div>
+
+            <div class="min-w-[80%] sm:min-w-[50%] md:min-w-[33.33%] lg:min-w-[25%] px-2">
+              <a href="#" class="block transform transition-transform duration-300 hover:scale-105">
+                <div class="relative rounded-md overflow-hidden shadow-lg h-72">
+                  <img src="assets/img/products/valeproduct4.png" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+                <div class="mt-4 text-left">
+                  <h3 class="font-medium text-xl mb-2 text-white">Tungsten Carbide Bar Drawing Die</h3>
+                  <!-- <p class="text-sm text-gray-300  mb-2">Engineered for efficient and accurate bar drawing processes.</p> -->
+                </div>
+              </a>
+            </div>
+
+            <div class="min-w-[80%] sm:min-w-[50%] md:min-w-[33.33%] lg:min-w-[25%] px-2">
+              <a href="#" class="block transform transition-transform duration-300 hover:scale-105">
+                <div class="relative rounded-md overflow-hidden shadow-lg h-72">
+                  <img src="assets/img/products/policrystalproduct2.png" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+                <div class="mt-4 text-left">
+                  <h3 class="font-medium text-xl mb-2 text-white">PCD Wire Die (Polycrystalline)</h3>
+                  <!-- <p class="text-sm text-gray-300  mb-2">Superior wear-resistant dies for high-performance wire drawing.</p> -->
+                </div>
+              </a>
+            </div>
+
+            <div class="min-w-[80%] sm:min-w-[50%] md:min-w-[33.33%] lg:min-w-[25%] px-2">
+              <a href="#" class="block transform transition-transform duration-300 hover:scale-105">
+                <div class="relative rounded-md overflow-hidden shadow-lg h-72">
+                  <img src="assets/img/products/complexdiamondproduct3.png" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+                <div class="mt-4 text-left">
+                  <h3 class="font-medium text-xl mb-2 text-white">Complex Diamond Die</h3>
+                  <!-- <p class="text-sm text-gray-300  mb-2">Advanced diamond dies designed for intricate shaping and durability.</p> -->
+                </div>
+              </a>
+            </div>
+
+            <div class="min-w-[80%] sm:min-w-[50%] md:min-w-[33.33%] lg:min-w-[25%] px-2">
+              <a href="#" class="block transform transition-transform duration-300 hover:scale-105">
+                <div class="relative rounded-md overflow-hidden shadow-lg h-72">
+                  <img src="assets/img/products/diesfastenereproduct5.png" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+                <div class="mt-4 text-left">
+                  <h3 class="font-medium text-xl mb-2 text-white">TC Shaped Bar Die</h3>
+                  <!-- <p class="text-sm text-gray-300  mb-2">Custom-shaped bar drawing dies for specialized applications.</p> -->
+                </div>
+              </a>
+            </div>
+
+            <div class="min-w-[80%] sm:min-w-[50%] md:min-w-[33.33%] lg:min-w-[25%] px-2">
+              <a href="#" class="block transform transition-transform duration-300 hover:scale-105">
+                <div class="relative rounded-md overflow-hidden shadow-lg h-72">
+                  <img src="assets/img/products/tcwireproduct1.png" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+                <div class="mt-4 text-left">
+                  <h5 class="font-medium text-xl mb-2 text-white">TC Special Profile Shape Die </h5>
+                  <!-- <p class="text-sm text-gray-300  mb-2">Precision dies for complex profile shaping needs.</p> -->
+                </div>
+              </a>
+            </div>
+
+            <div class="min-w-[80%] sm:min-w-[50%] md:min-w-[33.33%] lg:min-w-[25%] px-2">
+              <a href="#" class="block transform transition-transform duration-300 hover:scale-105">
+                <div class="relative rounded-md overflow-hidden shadow-lg h-72">
+                  <img src="assets/img/products/valeproduct4.png" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+                <div class="mt-4 text-left">
+                  <h3 class="font-medium text-xl mb-2 text-white">TC Valve Forging Die</h3>
+                  <!-- <p class="text-sm text-gray-300  mb-2">Reliable dies for manufacturing high-strength forged valves.</p> -->
+                </div>
+              </a>
+            </div>
+
+            <div class="min-w-[80%] sm:min-w-[50%] md:min-w-[33.33%] lg:min-w-[25%] px-2">
+              <a href="#" class="block transform transition-transform duration-300 hover:scale-105">
+                <div class="relative rounded-md overflow-hidden shadow-lg h-72">
+                  <img src="assets/img/products/policrystalproduct2.png" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+                <div class="mt-4 text-left">
+                  <h3 class="font-medium text-xl mb-2 text-white">TC Dies for Concrete Nail</h3>
+                  <!-- <p class="text-sm text-gray-300  mb-2">Robust dies for producing durable concrete nails.</p> -->
+                </div>
+              </a>
+            </div>
+
+            <div class="min-w-[80%] sm:min-w-[50%] md:min-w-[33.33%] lg:min-w-[25%] px-2">
+              <a href="#" class="block transform transition-transform duration-300 hover:scale-105">
+                <div class="relative rounded-md overflow-hidden shadow-lg h-72">
+                  <img src="assets/img/products/complexdiamondproduct3.png" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+                <div class="mt-4 text-left">
+                  <h3 class="font-medium text-xl mb-2 text-white">TC Compacting Dies</h3>
+                  <!-- <p class="text-sm text-gray-300  mb-2">High-precision compacting dies for efficient material processing.</p> -->
+                </div>
+              </a>
+            </div>
+
+            <div class="min-w-[80%] sm:min-w-[50%] md:min-w-[33.33%] lg:min-w-[25%] px-2">
+              <a href="#" class="block transform transition-transform duration-300 hover:scale-105">
+                <div class="relative rounded-md overflow-hidden shadow-lg h-72">
+                  <img src="assets/img/products/diesfastenereproduct5.png" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+                <div class="mt-4 text-left">
+                  <h3 class="font-medium text-xl mb-2 text-white">Die Reworking Machines & Consumables</h3>
+                  <!-- <p class="text-sm text-gray-300  mb-2">Solutions for maintaining and refurbishing dies.</p> -->
+                </div>
+              </a>
+            </div>
+
+            <div class="min-w-[80%] sm:min-w-[50%] md:min-w-[33.33%] lg:min-w-[25%] px-2">
+              <a href="#" class="block transform transition-transform duration-300 hover:scale-105">
+                <div class="relative rounded-md overflow-hidden shadow-lg h-72">
+                  <img src="assets/img/products/tcwireproduct1.png" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+                <div class="mt-4 text-left">
+                  <h5 class="font-medium text-xl mb-2 text-white">I.D. Measuring Gauge Set</h5>
+                  <!-- <p class="text-sm text-gray-300  mb-2">Accurate measuring tools for internal diameter assessment.</p> -->
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Next Button -->
+        <button class="absolute right-[-20px] sm:right-[-30px] md:right-[-40px] top-40 -translate-y-1/2 z-20 rounded-full shadow-lg" id="nextBtn">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+    </section>
+    <!-- Explore products section ends -->
+
+    <!-- Certificates Section Start -->
+    <div class="bg-gray-100 text-[#000053] py-16 px-6 md:px-12" data-aos="fade-up">
+      <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-4xl md:text-5xl font-medium leading-tight ">
+          Our Commitment to Quality
+        </h2>
+        <hr class="border-[#CD5634] w-20 md:w-40 my-4 mx-auto">
+        <p class="text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
+          Khurana Wire Dies is proudly ISO 9001:2015 certified, ensuring our manufacturing process adheres to the highest international quality standards. 
+
+        </p>
+
+        <!-- Certification Cards -->
+        <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+          <!-- ISO 9001 Certified -->
+          <div class="text-center" data-aos="fade-left">
+            <img src="assets/img/usab.jpg" alt="ISO 9001:2015 Certified" class="mx-auto w-24 sm:w-28 md:w-32 shadow-xl hover:scale-105">
+            <h3 class="text-lg sm:text-xl font-semibold mt-4">USAB Accredited</h3>
+            <p class="mt-2 text-xs sm:text-sm max-w-xs mx-auto">
+              Recognized for maintaining global manufacturing standards.
+            </p>
+          </div>
+
+          <!-- Trusted Supplier Certification -->
+          <div class="text-center">
+            <img src="assets/img/iso.png" alt="Trusted Supplier Certifications" class="mx-auto w-24 sm:w-32 md:w-36 rounded-full  hover:scale-105">
+            <h3 class="text-lg sm:text-xl font-semibold mt-4">ISO 9001:2015 Certified</h3>
+            <p class="mt-2 text-xs sm:text-sm max-w-xs mx-auto">
+              Ensuring consistent quality management and customer satisfaction.
+            </p>
+          </div>
+
+          <!-- Global Client Approvals -->
+          <div class="text-center" data-aos="fade-right">
+            <img src="assets/img/sigcert.png" alt="Global Client Approvals" class="mx-auto w-24 sm:w-28 md:w-32  shadow-xl hover:scale-105">
+            <h3 class="text-lg sm:text-xl font-semibold mt-4">Sigcert Certified</h3>
+            <p class="mt-2 text-xs sm:text-sm max-w-xs mx-auto">
+              Committed to international compliance and excellence.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Certificates Section End -->
+
+    <!-- Contact Section -->
+    <section class="max-w-5xl mx-auto my-16  bg-white shadow-lg rounded-lg relative px-4 md:px-0">
+      <div class="flex flex-col md:flex-row">
+      <!-- Left Side: Contact Information (1/3 Width) -->
+      <div class="relative bg-gradient-to-b from-[#000053] to-[#410179] text-white p-8 rounded-t-lg md:rounded-l-lg md:rounded-tr-none md:w-1/3 flex flex-col justify-between overflow-hidden">
+          <div>
+          <h2 class="text-3xl font-bold mb-8">Contact Information</h2>
+          <div class="space-y-4">
+              <div class="flex items-center">
+              <i class="fas fa-phone mr-4"></i>
+              <a href="tel:+919321584055" class="hover:text-gray-300">+91 9321584055</a>
+              </div>
+              <div class="flex items-center">
+              <i class="fas fa-envelope mr-4"></i>
+              <a href="mailto:info@khuranawiredie.com" class="hover:text-gray-300">info@khuranawiredie.com</a>
+              </div>
+              <div class="flex space-x-4">
+                <a href="#" class="text-white text-xl sm:text-2xl"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-white text-xl sm:text-2xl"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-white text-xl sm:text-2xl"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white text-xl sm:text-2xl"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          </div>
+          
+          <!-- Large Decorative Circles -->
+          <div class="absolute -bottom-3 -right-32">
+          <div class="relative">
+              <div class="w-60 h-60 bg-[#f3fff6] rounded-full opacity-90"></div>
+              <div class="w-28 h-28 bg-gray-500 rounded-full opacity-60 absolute -bottom-5 -left-4"></div>
+          </div>
+          </div>
+      </div>
       
-    <!--End of Tawk.to Script-->
 
-    <script src="script.js"></script>
+      <!-- Right Side: Contact Form (2/3 Width) -->
+      <div class="p-8 md:w-2/3 text-[#000053] pt-12 ">
+          <form action="#" method="POST" class="space-y-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 ">
+              <div>
+              <label for="first-name" class="block ">Your Name</label>
+              <input type="text" id="first-name" name="first-name" class="w-full border-b border-gray-300 focus:border-gray-500 outline-none p-1" placeholder="John Doe">
+              </div>
+              <div>
+              <label for="last-name" class="block ">Company Name</label>
+              <input type="text" id="last-name" name="last-name" class="w-full border-b border-gray-300 focus:border-gray-500 outline-none p-1" placeholder="eg: ABC Company">
+              </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+              <label for="email" class="block ">Your Email</label>
+              <input type="email" id="email" name="email" class="w-full border-b border-gray-300 focus:border-gray-500 outline-none p-1" placeholder="you@example.com">
+              </div>
+              <div>
+              <label for="phone" class="block">Phone Number</label>
+              <input type="tel" id="phone" name="phone" class="w-full border-b border-gray-300 focus:border-gray-500 outline-none p-1" placeholder="+1 012 3456 789">
+              </div>
+          </div>
+          <div>
+              <label for="country" class="block ">Country</label>
+              <input type="text" id="country" name="country" class="w-full border-b border-gray-300 focus:border-gray-500 outline-none p-1" placeholder="Country">
+          </div>
+          <div>
+              <label for="message" class="block ">Message</label>
+              <textarea id="message" name="message" class="w-full border-b border-gray-300 focus:border-gray-500 outline-none p-1" rows="4" placeholder="Write your message.."></textarea>
+          </div>
+          <button type="submit" class="w-full sm:w-auto px-6 py-3 border border-[#000053] text-[#000053] font-semibold rounded-full hover:bg-[#000053] hover:text-white focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50">
+              Send Message
+          </button>
+          </form>
+      </div>
+      </div>
+  </section>
 
-  </body>
+    <!-- Footer -->
+    
+    <footer class="relative bg-[#000035] text-white py-8 px-6 ">
+      <!-- Background Image Layer -->
+      <div class="absolute inset-0 bg-[url('assets/img/wire1.jpeg')] bg-cover bg-center opacity-5 z-0"></div>
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
+          
+          <!-- Company Info Section -->
+          <div class="space-y-3 z-20">
+              <a class="z-10" href="index.html"><img src="assets/logo.avif" alt=" Logo" class="w-48 mb-2 z-50"></a>
+
+              <h2 class="text-lg font-semibold">Khurana Wire Drawing Dies Private Limited</h2>
+              <ul>
+                <li class="flex items-center mb-4"><img src="assets/icons/location.png" alt="location" class="w-6 mr-4"></img><a href="https://maps.app.goo.gl/xpQBtfGTnbHieW688" class="z-10">No.27, Ground Floor, Punjani Industrial Estate, Khopat, Khopat, Thane, Maharashtra - 400601, India</a></li>
+                <li class="flex items-center mb-4"><img src="assets/icons/phone.png" alt="Phone" class="w-6 mr-4"><a href="tel:+919321584055" class="z-10">+91 9321584055</a></li>   
+                <li class="flex items-center mb-4"><img src="assets/icons/mail.png" alt="Mail" class="w-6 mr-4"><a href="mailto:info@khuranawiredie.com" class="z-10">info@khuranawiredie.com</a></li>                       
+            </ul>
+          </div>
+  
+          <!-- Useful Links & Products -->
+          <div class="grid grid-cols-1 gap-6 z-20">
+              <div>
+                  <h3 class="text-lg font-semibold py-6">Useful Links</h3>
+                  <ul class="space-y-2">
+                      <li><a href="index.html" class="hover:text-gray-400"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>Home</a></li>
+                      <li><a href="about.html" class="hover:text-gray-400"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>About</a></li>
+                      <li><a href="products.html" class="hover:text-gray-400"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>Products</a></li>
+                      <li><a href="gallery.html" class="hover:text-gray-400"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>Gallery</a></li>
+                      <!-- <li><a href="#" class="hover:text-gray-400"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>Die Chart</a></li> -->
+                      <li><a href="contact.html" class="hover:text-gray-400"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>Contact Us</a></li>
+                      <li><a href="#" class="hover:text-gray-400"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>Privacy Policy</a></li>
+                      <li><a href="#" class="hover:text-gray-400"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>Terms & Conditions</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="grid grid-cols-1 gap-6 z-20">
+            <div>
+              <h3 class="text-lg font-semibold py-6">Our Products</h3>
+              <ul class="space-y-2">
+                  <li><a href="tungstencarbidewiredrawingdie.html" class="hover:text-gray-400"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>Tungsten Carbide Wire Drawing Die</a></li>
+                  <li><a href="tcbardrawingdie.html" class="hover:text-gray-400"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>Tungsten Carbide Bar Drawing Die</a></li>
+                  <li><a href="pcdwiredie.html" class="hover:text-gray-400"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>PCD Wire Die (Polycrystalline)</a></li>
+                  <li><a href="compexdiamonddie.html" class="hover:text-gray-400"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>Complex Diamond Die</a></li>
+                  <li><a href="tcshapedbardie.html" class="hover:text-gray-400"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>TC Shaped Bar Die</a></li>
+                  <li><a href="tcspecialprofileshapedie.html" class="hover:text-gray-400"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>TC Special Profile Shape Die</a></li>
+                  <li><a href="tcvalveforgingdie.html" class="hover:text-gray-400"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>TC Valve Forging Die</a></li>
+                  <li><a href="tcdiesforconcretenail.html" class="hover:text-gray-400"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>TC Dies for Concrete Nail</a></li>
+                  <li><a href="tccompactingdies.html" class="hover:text-gray-400"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>TC Compacting Dies</a></li>
+                  <li><a href="diereworkingmachines.html" class="hover:text-gray-400"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>Die Reworking Machines & Consumables</a></li>
+                  <li><a href="idmeasuringgaugeset.html" class="hover:text-gray-400"><i class="fas fa-chevron-right text-[#cd5634] mr-2"></i>I.D. Measuring Gauge Set</a></li>
+              </ul>
+          </div>
+          </div>
+  
+          <!-- Certifications  -->
+          <div class="md:text-left space-y-3 z-20">
+              <h3 class="text-lg font-semibold py-6">Celebrating 60 Years of Excellence</h3>
+              <div class="flex justify-center md:justify-start space-x-4">
+                  <img src="assets/img/60th.png" alt="60 Years" class="w-40 bg-white">
+                  <img src="assets/img/iso.jpg" alt="ISO Certified" class="w-40">
+              </div>  
+          </div>
+      </div>
+  
+      <!-- Copyright -->
+        
+        <div class="border-t border-gray-700 mt-6 pt-4 text-center text-xs md:text-sm text-gray-400 z-20">
+          <p>Copyright © 2025 <a href="index.html" class="hover:text-gray-300">Khurana Wire Drawing Dies Pvt Ltd. </a>All Rights Reserved. </p>
+          <p>Website Design & SEO By <a href="www.benzenecorp.com" class="hover:text-gray-300">Benzene Corporation</a></p>
+        </div>
+        <div class="flex justify-center space-x-4 mt-4 ">
+          <a href="#" class="z-20"><img src="assets/icons/youtube.png" alt="YouTube" class="w-6"></a>
+          <a href="#" class="z-20"><img src="assets/icons/facebook.png" alt="Facebook" class="w-6"></a>
+          <a href="#" class="z-20"><img src="assets/icons/linkedin.png" alt="LinkedIn" class="w-6"></a>
+          <a href="#" class="z-20"><img src="assets/icons/instagram.png" alt="Instagram" class="w-6"></a>
+      </div>
+  </footer>
+  
+
+    <!-- Scroll to Top Button -->
+    <!-- <button id="scrollToTopBtn" class="scroll-to-top-btn  text-white text-4xl z-50">
+      <i class="fa-regular fa-circle-up"></i>
+    </button> -->
+
+
+    <!-- WhatsApp Button HTML -->
+    <a class="whatsapp-button" href="https://wa.me/919321584055" target="_blank" title="Chat with us on WhatsApp"> 
+        <img src="assets/img/icon/whatsapp.png" alt="WhatsApp" class="whatsapp-icon"/>
+    </a>
+        
+
+  </div>
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {},
+      Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"),
+        s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = "";
+      s1.charset = "UTF-8";
+      s1.setAttribute("crossorigin", "*");
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>  
+  <!--End of Tawk.to Script-->
+
+  <script src="script.js"></script>
+  <!-- SwiperJS Script -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+var swiper = new Swiper(".heroSwiper", {
+  loop: true,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  speed: 700,
+  effect: "fade", // Smooth fade transition
+  fadeEffect: { crossFade: true },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+</script>
+
+<!-- Custom CSS for Animations & Arrows -->
+<style>
+/* Smooth fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom Swiper Navigation Buttons */
+.swiper-button-prev, .swiper-button-next {
+  background-color: rgba(0, 0, 83, 0.8);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.swiper-button-prev:hover, .swiper-button-next:hover {
+  transform: scale(1.15);
+  background-color: #000053;
+}
+
+.swiper-button-prev::after, .swiper-button-next::after {
+  font-size: 18px;
+  color: white;
+}
+
+/* Pagination Dots */
+.swiper-pagination-bullet {
+  background: white;
+  opacity: 0.5;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  transform: scale(1.3);
+}
+</style>
+
+
+</body>
 </html>
