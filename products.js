@@ -11,7 +11,7 @@
     { title: "TC Dies for Concrete Nail", imageUrl: "assets/img/8.webp", link: "tcdiesforconcretenail.html", buttonText: "LEARN MORE" },
     { title: "TC Compacting Dies", imageUrl: "assets/img/7.webp", link: "tccompactingdies.html", buttonText: "LEARN MORE" },
     { title: "Die Reworking Machines & Consumables", imageUrl: "assets/img/7.webp", link: "diereworkingmachines.html", buttonText: "LEARN MORE" },
-    { title: "I.D. Meaduring Gauge Set", imageUrl: "assets/img/7.webp", link: "idmeasuringgaugeset.html", buttonText: "LEARN MORE" },
+    { title: "I.D. Measuring Gauge Set", imageUrl: "assets/img/7.webp", link: "idmeasuringgaugeset.html", buttonText: "LEARN MORE" },
    
   ];
 
