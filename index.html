@@ -246,10 +246,14 @@
       <!-- Background Image Layer -->
       <!-- <div class="absolute inset-0 bg-[url('assets/img/background1.png')] bg-cover bg-center opacity-10"></div> -->
        <!-- Background Video Layer -->
-      <video class="absolute inset-0 w-full h-full object-cover opacity-25" autoplay loop muted playsinline>
+      <video class="absolute inset-0 w-full h-full object-cover" autoplay loop muted playsinline>
         <source src="assets/bgvideo.mp4" type="video/webm">
         Your browser does not support the video tag.
       </video>
+
+      <!-- Gradient Overlay (Fixes Issue) -->
+      <div class="absolute inset-0 bg-gradient-to-l from-[#000053] to-[#000035] opacity-70"></div>
+
 
       <div class="relative container mx-auto py-16 px-8 md:px-40">
         <!-- Swiper Container -->
